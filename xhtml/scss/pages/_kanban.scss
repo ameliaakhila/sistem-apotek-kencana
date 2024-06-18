@@ -1,0 +1,103 @@
+.company-profile{
+	border-radius:20px;
+	img{
+		height:205px;
+		width:100%;
+		object-fit: cover;
+		
+	}
+}
+.workload-button{
+	a{
+		padding: 12px 20px;
+		margin: 18px 7px;
+		@include respond('phone-land'){
+			padding: 7px 20px;
+			margin: 7px 7px;
+		}
+	}	
+}
+.kanbanimg{
+	display:flex;	
+	img{
+		height:40px;
+		width:40px;
+		border-radius:50px;
+		object-fit:cover;
+		border:1px solid $white;
+	}	
+	li{
+		margin-right: -10px;	
+		span{
+			height:40px;
+			width:40px;
+			border-radius:50px;
+			background:var(--primary);
+			color:white;
+			line-height:40px;
+			display:block;
+			font-size:18px;
+			font-weight:600;
+			text-align:center;
+			border:1px solid $white;
+		}
+	}
+}
+.info{
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;	
+}
+.kanban-bx {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+	.col {
+		width: 360px;
+		min-width: 360px;
+		flex-grow: unset;
+		flex-basis: unset;
+		.card {
+			height: auto;
+			cursor: all-scroll;	
+		}
+	}
+	&::-webkit-scrollbar {
+		background-color: #ECECEC;
+		width: 8px;
+		height: 8px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: #7e7e7e;
+		border-radius: 10px;
+	}
+}
+.draggable.card{
+	transition:none;
+}
+.kanban-user{
+	.users{
+		display:flex;
+		li{
+			margin-right:-10px;
+			img{
+				border-radius: 32px;
+				height: 32px;
+				width: 32px;
+				border: 2px solid #fff;	
+			}	
+		}	
+	}	
+}
+.bg-design{
+	background:#FFA7D7;
+}
+.kanbanimg1{
+	justify-content: end;
+    display: flex;
+	@include respond('tab-port'){
+		justify-content:start;	
+		padding:10px 0;
+	}
+}

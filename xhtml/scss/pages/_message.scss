@@ -1,0 +1,226 @@
+
+.fillow-design{
+	a{
+		height:60px;
+		width:60px;
+		border-radius:60px;
+		text-align:center;
+		background: linear-gradient(204.23deg, #514EDF 15.52%, #20F2FF 98.45%);
+		display: block;
+		color: white;
+		font-size: 30px;
+		line-height: 60px;
+		
+	}	
+}
+.activity{
+	ul{
+		li{
+			a{
+				padding:0 15px;	
+				font-size:20px;
+			}	
+		}	
+	}	
+}
+.chat-box-area{
+	height:630px;	
+}
+.image-box{
+	position: relative;
+	display: inline-block;	
+	.img-1{
+		width: 58px;
+		height: 58px;	
+	}
+	span{
+		&.active1{
+			position: absolute;
+			bottom: -5px;
+			right: -5px;
+			height: 24px;
+			width: 24px;
+			background: #43DC80;
+			border: 4px solid #fff;
+			border-radius: 3rem;	
+		}	
+	}
+}	
+.message-received {
+	width: 62%;
+    text-align: left;	
+	p{
+		background: rgba(110,110,110,0.14);
+		text-align: left;
+		font-size: 14px;
+		border-radius: 0 20px 20px 20px;
+		padding: 10px 20px;
+		color: #000;
+		font-weight: 400;	
+	}
+	@include respond('phone'){
+		width:100%;	
+	}
+}
+.media{
+	display: flex;
+    align-items: flex-start;	
+}
+.message-sent{
+	width: 62%;
+    text-align: right;	
+	@include respond('phone'){
+		width:100%;	
+	}
+}
+.message-sent p {
+	background:var(--primary);
+    text-align: left;
+    border-radius: 20px 20px 0 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;	
+}
+.group-pic{
+	margin-right: 15px;
+	img{
+		height: 25px;
+		width: 25px;
+		border-radius: 25px;
+		object-fit: cover;	
+		margin: 2px 2px;
+	}	
+}
+.type-massage{
+	.input-group{
+		textarea{
+			height:5rem;
+			padding:15px;
+			border-color:var(--primary);
+			border-width:2px;
+		}	
+	}	
+	.input-group-append{
+		button{
+			padding: 10px 15px;
+			margin: 15px 0;
+			@include respond('phone'){
+				padding: 9px 9px;	
+				margin: 9px 0;
+			}
+		}	
+	}
+}
+.chat-box-area{
+	height: 630px;
+    padding:0  15px;
+}
+
+.chat-sidebar{
+	height:700px;
+}
+.message-tab{
+	.card-tabs .nav-tabs .nav-link{
+		padding: 12px 15px;	
+	}		
+}
+.chat-bx-group{
+	padding: 10px 0;
+	.user{
+		a{
+			height:50px;
+			width:50px;
+			border-radius:50px;
+			color:$white;
+			display: block;
+			text-align: center;
+			line-height: 50px;
+			font-size: 20px;
+		}	
+	}	
+}
+.chat-bx{
+	padding:7px 0;	
+}
+.chat-img{
+	position:relative;
+	margin-right: 15px;
+	img{
+		height:50px;
+		width:50px;
+		border-radius:50px;
+	}	
+	.active{
+		position:absolute;
+		height:16px;
+		width:16px;
+		border-radius:16px;
+		border:2px solid $white;
+		background:$success;
+		bottom: 28px;
+		right: 0;
+	}
+}
+.bg-team1{
+	background: linear-gradient(209.58deg, #00A15D 4.57%, #C7E220 98.19%);	
+}
+.bg-team2{
+	background: linear-gradient(39.74deg, #FFD34B 13.72%, #FF614B 90.36%);
+}
+.bg-team3{
+	background: linear-gradient(204.23deg, #514EDF 15.52%, #20F2FF 98.45%);
+}
+.bg-team4{
+	background: linear-gradient(204.23deg, #FF2F6D 15.52%, #FF8FF4 98.45%);
+}
+.bg-team5{
+	background: linear-gradient(216.03deg, #C548FF 8.84%, #EE29FF 86.74%);
+}
+
+
+//////Latest Activity
+
+.side-border{
+	span{
+		background: white;
+		position: relative;
+		z-index: 1;	
+		padding-right: 20px;
+	}
+	h4{
+		position:relative;
+		&:after{
+			position:absolute;
+			content:"";
+			width:100%;
+			border: dotted 2px #D7D7D7;
+			top: 16px;
+			left: 0;
+			
+		}
+	}	
+}
+.enaergy{
+	span{
+		height:51px;
+		width:51px;
+		text-align:center;
+		line-height:51px;
+		color:$white;
+		display: block;
+		border-radius: 51px;
+		font-size: 25px;
+
+	}
+}
+.latest{
+	padding: 20px 0;	
+	a{
+		font-size:18px;
+		font-weight:500;
+	}	
+	@include respond('phone'){
+		padding: 10px 0;
+	}
+}
