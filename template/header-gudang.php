@@ -106,8 +106,8 @@
                                 <a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
                                     <img src="../assets/images/user.jpg" width="20" alt=""/>
 									<div class="header-info ms-3">
-										<span class="fs-18 font-w500 mb-2">Admin</span>
-										<small class="fs-12 font-w400">admin@gmail.com</small>
+										<span class="fs-18 font-w500 mb-2">Gudang</span>
+										<small class="fs-12 font-w400">gudang@gmail.com</small>
 									</div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end">

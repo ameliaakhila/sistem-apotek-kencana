@@ -1,5 +1,5 @@
-<?php include('../template/header-admin.php') ?>
-<?php include('../template/header-admin-menu.php') ?>
+<?php include('../template/header-gudang.php') ?>
+<?php include('../template/header-gudang-menu.php') ?>
 
 		<!--**********************************
             Content body start
