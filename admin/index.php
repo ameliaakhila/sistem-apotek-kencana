@@ -36,14 +36,14 @@
 										<a href="index.html"><img src="images/logo-full.png" alt=""></a>
 									</div>
                                     <h4 class="text-center mb-4">Sign in your account</h4>
-                                    <form action="index.html">
+                                    <form method="post" action="cek_login.php">
                                         <div class="mb-3">
-                                            <label class="mb-1"><strong>Email</strong></label>
-                                            <input type="email" class="form-control" value="hello@example.com">
+                                            <label class="mb-1"><strong>Username</strong></label>
+                                            <input type="text" name="username" placeholder="Inputkan Username" class="form-control" value="admin">
                                         </div>
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Password</strong></label>
-                                            <input type="password" class="form-control" value="Password">
+                                            <input type="password" name="password" placeholder="Inputkan password" class="form-control" value="admin">
                                         </div>
                                         <div class="row d-flex justify-content-between mt-4 mb-2">
                                             <div class="mb-3">
