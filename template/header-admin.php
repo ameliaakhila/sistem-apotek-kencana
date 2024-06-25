@@ -21,7 +21,7 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Workload Project Management</title>
+	<title>Sistem Apotek Kencana</title>
 	
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
@@ -79,8 +79,8 @@
 				</svg>
 
 				<div class="brand-title">
-					<h2 class="">Workload</h2>
-					<span class="brand-sub-title">Project Management Admin</span>
+					<h2 class="">Apotek</h2>
+					<span class="brand-sub-title">Sistem Apotek Kencana</span>
 				</div>
             </a>
             <div class="nav-control">
