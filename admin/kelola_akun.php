@@ -7,54 +7,49 @@
         <div class="content-body">
             <!-- row -->
 			<div class="container-fluid">
-				<div class="row">
-					
+				<div class="row">				
 
-					<div class="col-xl-12">
-						<div class="card">
-							<div class="card-header border-0">
-								<div>
-									<h4 class="fs-50 font-w700">Kelola Akun</h4>
-								</div>
-							</div>
-                            <?php include('../alert.php'); ?>
-                            <button style="max-width: 200px;" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#tambah"><i data-feather="plus"></i>Tambah Pengguna</button>
-                            <table id="tabel_js" class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Nama Akun</th>
-                                        <th>Status</th>
-                                        <th>Opsi</th>
-                                    
-                                    </tr>
-                                </thead>
-                                
-                            <?php
-                                include '../koneksi.php';
-                                $no = 1;
-                                $data = mysqli_query($koneksi, "SELECT * from tb_user");
-                                while ($d = mysqli_fetch_array($data)) {
-                                ?>
-                                
-                                    <tr>
-                                        <td><?= $no++ ?></td>
-                                        <td><?= $d['username'] ?></td>
-                                        <td><?= $d['status'] ?></td>
-                                        <td>
-
-                                            <a class="fas fa-trash" href="kelola_akun_hapus.php?id_user=<?php echo $d['id_user']; ?>" onclick="return confirm('Anda yakin Hapus data user <?php echo $d['username']; ?> ?')"></a>
-                                            <button class="fas fa-edit" data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user'] ?>" id=".$d['id_user']."></button>
-                                            <button class="btn btn-warning btn-sm"  data-bs-toggle="modal" data-bs-target="#password<?php echo $d['id_user'] ?>" id=".$d['id_user']."></button>
-                                            <button class="btn btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#detail<?php echo $d['id_user'] ?>" id=".$d['id_user']."></button>
-                                            <!-- <?php include('kelola_akun_modal.php') ?> -->
-                                        </td>
-                                    </tr>
-                                
-                                <?php } ?>
-                            </table>
-						</div>
-					</div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Kelola Akun</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example3" class="display" style="min-width: 845px">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Username</th>
+                                                <th>Password</th>
+                                            </tr>
+                                        </thead>
+                                        <?php 
+                                            include '../koneksi.php';
+                                            $no = 1;
+                                            $data = mysqli_query($koneksi, "SELECT * from tb_user");
+                                            while ($d = mysqli_fetch_array($data)) {
+                                            ?>
+                                        <tbody>
+                                            <tr>
+                                                <td><img class="rounded-circle" width="35" src="images/profile/small/pic1.jpg" alt=""></td>
+                                                <td><?= $d['username'] ?></td>
+                                                <td><?= sha1($d['password']) ?></td>
+                                                <td>
+													<div class="d-flex">
+														<a data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Modal centered</button>
+														<a href="kelola_akun_hapus.php?id_user=<?php echo $d['id_user']; ?>" onclick="return confirm('Anda yakin Hapus data user <?php echo $d['username']; ?> ?')" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+													</div>												
+												</td>												
+                                            </tr>
+                                        </tbody>
+                                        <?php } ?>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 					
 				</div>
             </div>

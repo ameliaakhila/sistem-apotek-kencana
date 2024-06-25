@@ -13,5 +13,5 @@ $cek_hapus = mysqli_query($koneksi, "delete from tb_user where id_user='$id_user
 
 // mengalihkan halaman kembali ke index.php
 if ($cek_hapus) {
-    header("location:kelola_petugas.php?pesan=hapus_berhasil");
+    header("location:kelola_akun.php?pesan=hapus_berhasil");
 } 

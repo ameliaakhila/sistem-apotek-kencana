@@ -45,7 +45,10 @@
     <script src="../assets/js/custom.min.js"></script>
 	<script src="../assets/js/dlabnav-init.js"></script>
 	
-   
+	<!-- data table -->
+	<script src="../assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="../assets/js/plugins-init/datatables.init.js"></script>
+
 	<script>
 		function cardsCenter()
 		{
