@@ -14,13 +14,12 @@
 						<div class="card">
 							<div class="card-header border-0">
 								<div>
-									<h4 class="fs-20 font-w700">Dashboard</h4>
+									<h4 class="fs-30 font-w700">Apotik Kencana💊</h4>
                                     <p style="font-size: 14px;">Selamat datang di Aplikasi Gudang Apotik! Silakan login untuk mengakses sistem manajemen gudang kami yang efisien dan aman. Dengan login, Anda dapat melakukan pemantauan stok obat, 
                                         pengelolaan pesanan, dan pelacakan distribusi secara real-time.</p>
 								</div>
-								
-							</div>																							
-							
+							</div>	
+							<div class="card-img d-flex justify-content-center"><img src="../assets/images/gambar.svg" class="img-fluid" alt="Description of image" style="max-width: 30rem"/></div>							
 						</div>
 					</div>
 					
@@ -39,7 +38,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Apotikkencana &amp; Developed by <a href="#" target="_blank">Apotikkencana</a> 2021</p>
+                <p>Copyright © Apotikkencana &amp; Developed by <a href="#" target="_blank">Apotikkencana</a> 2024</p>
             </div>
         </div>
         <!--**********************************

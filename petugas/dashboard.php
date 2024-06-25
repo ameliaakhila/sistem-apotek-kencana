@@ -1,5 +1,5 @@
-<?php include('../template/header-admin.php') ?>
-<?php include('../template/header-admin-menu.php') ?>
+<?php include('../template/header-petugas.php') ?>
+<?php include('../template/header-petugas-menu.php') ?>
 
 		<!--**********************************
             Content body start
@@ -17,8 +17,7 @@
 									<h4 class="fs-20 font-w700">Dashboard</h4>
                                     <p style="font-size: 14px;">Selamat datang di Aplikasi Gudang Apotik! Silakan login untuk mengakses sistem manajemen gudang kami yang efisien dan aman. Dengan login, Anda dapat melakukan pemantauan stok obat, 
                                         pengelolaan pesanan, dan pelacakan distribusi secara real-time.</p>
-								</div>
-								
+								</div>								
 							</div>																							
 							
 						</div>
