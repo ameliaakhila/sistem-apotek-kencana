@@ -7,6 +7,12 @@
 							<span class="nav-text">Dashboard</span>
 						</a>
 					</li>
+					<li>
+						<a href="kelola_akun.php">
+							<i class="fas fa-user"></i>
+							<span class="nav-text">Kelola Akun</span>
+						</a>
+					</li>
 
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-bars"></i>
