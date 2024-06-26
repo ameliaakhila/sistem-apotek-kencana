@@ -49,6 +49,9 @@
 	<script src="../assets/vendor/datatables/js/jquery.dataTables.min.js"></script>
     <script src="../assets/js/plugins-init/datatables.init.js"></script>
 
+	<!-- Modal -->
+	<script src="../assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
 	<script>
 		function cardsCenter()
 		{

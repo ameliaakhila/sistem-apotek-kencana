@@ -37,8 +37,12 @@
                                                 <td><?= sha1($d['password']) ?></td>
                                                 <td>
 													<div class="d-flex">
-														<a data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+														<button data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
+                                                        <a data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+														<button type="button" data-bs-toggle="modal" data-bs-target="masuk" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>
                                                         <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Modal centered</button>
+                                                        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Small modal</button>
+                                                        <!-- <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>">Modal centered</button> -->
 														<a href="kelola_akun_hapus.php?id_user=<?php echo $d['id_user']; ?>" onclick="return confirm('Anda yakin Hapus data user <?php echo $d['username']; ?> ?')" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
 													</div>												
 												</td>												
