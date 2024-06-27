@@ -20,7 +20,7 @@ $cek_edit = mysqli_query($koneksi, "UPDATE tb_user SET
 
 
 if ($cek_edit) {
-    header("location:kelola_petugas.php?pesan=edit-berhasil");
+    header("location:kelola_akun.php?pesan=edit_berhasil");
 } else {
-    header("location:kelola_petugas.php?pesan=edit-gagal");
+    header("location:kelola_akun.php?pesan=edit_gagal");
 }

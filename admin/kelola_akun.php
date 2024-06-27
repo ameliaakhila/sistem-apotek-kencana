@@ -16,12 +16,16 @@
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table id="example3" class="display" style="min-width: 845px">
+                                    <?php include('../alert.php') ?>
+
+                                    <button data-bs-toggle="modal" data-bs-target="#tambah" class="btn btn-primary btn-xs mb-2">Tambah Akun</button>
+                                    <table id="example3" class="table table-borderd" >
                                         <thead>
                                             <tr>
-                                                <th></th>
+                                                <th>No</th>
                                                 <th>Username</th>
-                                                <th>Password</th>
+                                                <th>Status</th>
+                                                <th>Opsi</th>
                                             </tr>
                                         </thead>
                                         <?php 
@@ -32,20 +36,17 @@
                                             ?>
                                         <tbody>
                                             <tr>
-                                                <td><img class="rounded-circle" width="35" src="images/profile/small/pic1.jpg" alt=""></td>
+                                                <td><?= $no++ ?></td>
                                                 <td><?= $d['username'] ?></td>
                                                 <td><?= sha1($d['password']) ?></td>
                                                 <td>
-													<div class="d-flex">
-														<button data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
-                                                        <a data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
-														<button type="button" data-bs-toggle="modal" data-bs-target="masuk" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>
-                                                        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Modal centered</button>
-                                                        <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target=".bd-example-modal-sm">Small modal</button>
-                                                        <!-- <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>">Modal centered</button> -->
-														<a href="kelola_akun_hapus.php?id_user=<?php echo $d['id_user']; ?>" onclick="return confirm('Anda yakin Hapus data user <?php echo $d['username']; ?> ?')" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
-													</div>												
-												</td>												
+													<a href="kelola_akun_hapus.php?id_user=<?php echo $d['id_user']; ?>" onclick="return confirm('Anda yakin Hapus data user <?php echo $d['username']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-key"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
+                                                                                                    
+                                                    <?php include('kelola_akun_modal.php') ?>
+                                                </td>
+
                                             </tr>
                                         </tbody>
                                         <?php } ?>
