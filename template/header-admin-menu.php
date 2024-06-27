@@ -2,9 +2,15 @@
             <div class="dlabnav-scroll">
 				<ul class="metismenu" id="menu">
 
-                    <li><a href="widget-basic.html" class="" aria-expanded="false">
+                    <li><a href="dashboard.php" class="" aria-expanded="false">
 							<i class="fas fa-home"></i>
 							<span class="nav-text">Dashboard</span>
+						</a>
+					</li>
+					<li>
+						<a href="kelola_akun.php">
+							<i class="fas fa-user"></i>
+							<span class="nav-text">Kelola Akun</span>
 						</a>
 					</li>
 

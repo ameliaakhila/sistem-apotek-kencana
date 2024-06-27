@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Waktu pembuatan: 20 Jun 2024 pada 13.27
+-- Waktu pembuatan: 25 Jun 2024 pada 05.59
 -- Versi server: 10.4.28-MariaDB
 -- Versi PHP: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `apotek_kencana`
+-- Database: `sistem-apotek-kencana`
 --
 
 -- --------------------------------------------------------
