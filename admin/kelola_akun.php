@@ -19,6 +19,7 @@
                                     <?php include('../alert.php') ?>
 
                                     <button data-bs-toggle="modal" data-bs-target="#tambah" class="btn btn-primary btn-xs mb-2">Tambah Akun</button>
+                                    <?php include('kelola_akun_modal_tambah.php') ?>
                                     <table id="example3" class="table table-borderd" >
                                         <thead>
                                             <tr>

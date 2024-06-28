@@ -13,8 +13,12 @@
                     <tr>
                         <td>Username</td>
                         <td>
-                            <input class="form-control" type="text" name="username" value="<?= $d['username'] ?>" require>
-                            <input type="hidden" name="id_user" value="<?= $d['id_user'] ?>">
+                            <input class="form-control" type="text" name="username" require>
+                        </td>
+                    </tr>
+                    <td>Password</td>
+                        <td>
+                            <input class="form-control" type="text" name="password" require>
                         </td>
                     </tr>
                     <tr>
