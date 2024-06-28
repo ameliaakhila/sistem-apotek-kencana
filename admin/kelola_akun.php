@@ -42,9 +42,8 @@
                                                 <td><?= sha1($d['password']) ?></td>
                                                 <td>
 													<a href="kelola_akun_hapus.php?id_user=<?php echo $d['id_user']; ?>" onclick="return confirm('Anda yakin Hapus data user <?php echo $d['username']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
-                                                    <button data-bs-toggle="modal" data-bs-target="#edit<?php echo $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-key"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#reset<?php echo $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-key"></i></button>
                                                     <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
-                                                                                                    
                                                     <?php include('kelola_akun_modal.php') ?>
                                                 </td>
 

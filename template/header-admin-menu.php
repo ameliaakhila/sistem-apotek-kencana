@@ -13,12 +13,6 @@
 							<span class="nav-text">Kelola Akun</span>
 						</a>
 					</li>
-					<li>
-						<a href="kelola_akun_modal_reset.php">
-							<i class="fas fa-lock"></i>
-							<span class="nav-text">Resset Password</span>
-						</a>
-					</li>
 
                     <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-bars"></i>
