@@ -16,7 +16,7 @@
 
 					<li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-pills"></i>
-							<span class="nav-text">Data Obat</span>
+							<span class="nav-text">Kelola Obat</span>
 						</a>
                         <ul aria-expanded="false">
 							<li><a href="data_obat.php">Data Obat</a></li>

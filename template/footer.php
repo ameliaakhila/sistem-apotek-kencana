@@ -28,7 +28,7 @@
     <!-- Required vendors -->
     <script src="../assets/vendor/global/global.min.js"></script>
 	<script src="../assets/vendor/chart.js/Chart.bundle.min.js"></script>
-	<script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="../assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
 	
 	<!-- Apex Chart -->
 	<script src="../assets/vendor/apexchart/apexchart.js"></script>
@@ -51,6 +51,30 @@
 
 	<!-- Modal -->
 	<script src="../assets/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
+	<!-- awal date pikcer -->
+	
+   	<!-- Daterangepicker -->
+    <!-- momment js is must -->
+    <script src="../assets/vendor/moment/moment.min.js"></script>
+    <script src="../assets/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- pickdate -->
+    <script src="../assets/vendor/pickadate/picker.js"></script>
+    <script src="../assets/vendor/pickadate/picker.time.js"></script>
+    <script src="../assets/vendor/pickadate/picker.date.js"></script>
+
+    <!-- Pickdate -->
+    <script src="../assets/js/plugins-init/pickadate-init.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+            $('#datepicker2').pickadate({
+                format: 'dd mmmm yyyy'
+            });
+        });
+    </script>
+
+	<!-- akhir datepicker -->
 
 	<script>
 		function cardsCenter()

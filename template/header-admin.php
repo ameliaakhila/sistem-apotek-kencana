@@ -34,6 +34,20 @@
 	
 	<!-- Style css -->
     <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- Daterange picker -->
+    <link href="../assets/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Clockpicker -->
+    <link href="../assets/vendor/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <!-- asColorpicker -->
+    <link href="../assets/vendor/jquery-asColorPicker/css/asColorPicker.min.css" rel="stylesheet">
+    <!-- Material color picker -->
+    <link href="../assets/vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+	
+    <!-- Pick date -->
+    <link rel="stylesheet" href="../assets/vendor/pickadate/themes/default.css">
+    <link rel="stylesheet" href="../assets/vendor/pickadate/themes/default.date.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 </head>
 <body>
