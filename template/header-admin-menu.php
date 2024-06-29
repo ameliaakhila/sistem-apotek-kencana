@@ -8,13 +8,38 @@
 						</a>
 					</li>
 					<li>
+						<a href="permintaan_obat.php">
+							<i class="fas fa-location-arrow"></i>
+							<span class="nav-text">Permintaan Obat</span>
+						</a>
+					</li>
+
+					<li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+							<i class="fas fa-pills"></i>
+							<span class="nav-text">Data Obat</span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="data_obat.php">Data Obat</a></li>
+							<li><a href="jenis_obat.php">Jenis Obat</a></li>
+						</ul>
+
+                    </li>
+
+					<li>
+						<a href="obat_masuk.php">
+							<i class="fas fa-solid fa-arrow-down"></i>
+							<span class="nav-text">Data Obat Masuk</span>
+						</a>
+					</li>
+					
+					<li>
 						<a href="kelola_akun.php">
-							<i class="fas fa-user"></i>
+							<i class="fas fa-users"></i>
 							<span class="nav-text">Kelola Akun</span>
 						</a>
 					</li>
 
-                    <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                    <!-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-bars"></i>
 							<span class="nav-text">Sub Menu</span>
 						</a>
@@ -28,7 +53,7 @@
 							<li><a href="latest-activity.html">Latest Activity</a></li>	
 						</ul>
 
-                    </li>
+                    </li> -->
 					                                    
                     
                 </ul>

@@ -28,6 +28,7 @@
 	<link href="../assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
 	<link href="../assets/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
+
      <!-- Datatable -->
      <link href="../assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 	
@@ -63,8 +64,8 @@
 				<img src="../assets/images/logo-apotek.png" alt="logo-apotek" style="max-width: 80px;">
                 <?php $username = $_SESSION['username']; ?>
 				<div class="brand-title">
-					<h2 class="">Apotek</h2>
-					<span class="brand-sub-title">Management <?= $username ?></span>
+					<h2 class="">Sistem</h2>
+					<span class="brand-sub-title">Apotik Kencana</span>
 				</div>
             </a>
             <div class="nav-control">
