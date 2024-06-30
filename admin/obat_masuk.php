@@ -31,13 +31,15 @@
                                                 <th>Opsi</th>
                                             </tr>
                                         </thead>
-                                        <?php 
+                                      
+                                        <tbody>
+                                            <?php 
                                             include '../koneksi.php';
                                             $no = 1;
-                                            $data = mysqli_query($koneksi, "SELECT * from tb_obat_masuk, tb_obat where tb_obat_masuk.id_obat=tb_obat.id_obat");
+                                            $data = mysqli_query($koneksi, "SELECT * from tb_obat_masuk, tb_obat, tb_jenis_obat 
+                                            where tb_obat_masuk.id_obat=tb_obat.id_obat AND tb_obat.id_jenis_obat=tb_jenis_obat.id_jenis_obat");
                                             while ($d = mysqli_fetch_array($data)) {
                                             ?>
-                                        <tbody>
                                             <tr>
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $d['kode_transaksi'] ?></td>
@@ -45,15 +47,16 @@
                                                 <td><?= $d['nama_obat'] ?></td>                                              
                                                 <td><?= $d['jumlah_obat'] ?></td>
                                                 <td>
-													<a href="data_obat_hapus.php?id_obat=<?= $d['id_obat']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
+													<a href="obat_masuk_hapus.php?id_obat_masuk=<?= $d['id_obat_masuk']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
                                                     <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_obat_masuk']; ?>" id=".$d['id_obat_masuk']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
-                                                    <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_user']; ?>" id=".$d['id_user']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_obat_masuk']; ?>" id=".$d['id_obat_masuk']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>
                                                     <?php include('obat_masuk_modal.php') ?>
                                                 </td>
 
                                             </tr>
+                                             <?php } ?>
                                         </tbody>
-                                        <?php } ?>
+                                       
                                     </table>
                                 </div>
                             </div>

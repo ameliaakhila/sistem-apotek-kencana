@@ -2,13 +2,19 @@
             <div class="dlabnav-scroll">
 				<ul class="metismenu" id="menu">
 
-                    <li><a href="widget-basic.html" class="" aria-expanded="false">
+                    <li><a href="index.php" class="" aria-expanded="false">
 							<i class="fas fa-home"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
 					</li>
+					<li>
+						<a href="permintaan_obat.php">
+							<i class="fas fa-location-arrow"></i>
+							<span class="nav-text">Permintaan Obat</span>
+						</a>
+					</li>
 
-                    <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
+                    <!-- <li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-bars"></i>
 							<span class="nav-text">Sub Menu</span>
 						</a>
@@ -22,7 +28,7 @@
 							<li><a href="latest-activity.html">Latest Activity</a></li>	
 						</ul>
 
-                    </li>
+                    </li> -->
 					                                    
                     
                 </ul>

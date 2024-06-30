@@ -1,5 +1,5 @@
-<?php include('../template/header-petugas.php') ?>
-<?php include('../template/header-petugas-menu.php') ?>
+<?php include('../template/header-apotik.php') ?>
+<?php include('../template/header-apotik-menu.php') ?>
 
 		<!--**********************************
             Content body start

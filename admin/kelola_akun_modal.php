@@ -24,8 +24,9 @@
                             <select class="form-control" name="status" id="" require>
                                 <option value="<?= $d['status'] ?>">Pilihan Awal (<?= $d['status'] ?>)</option>
                                 <option value="admin">Admin</option>
-                                <option value="petugas">petugas</option>
+                                <option value="apotik">Apotik</option>
                                 <option value="gudang">gudang</option>
+                                
                             </select>
                         </td>
                     </tr>

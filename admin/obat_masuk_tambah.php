@@ -41,11 +41,16 @@ $keterangan = $_POST['keterangan'];
 
 $query = "INSERT INTO tb_obat_masuk (kode_transaksi, tgl_obat_masuk, id_obat, jumlah_obat, tgl_kadaluarsa, keterangan) 
           VALUES ('$kode_transaksi', '$tgl_obat_masuk','$id_obat', '$jumlah_obat', '$tgl_kadaluarsa', '$keterangan')";
-
-
 $cek_tambah = mysqli_query($koneksi, $query);
 
-if ($cek_tambah) {
+
+$query_tambah_obat = "UPDATE tb_obat SET stok_obat = stok_obat + $jumlah_obat WHERE id_obat = $id_obat";
+$cek_tambah_obat = mysqli_query($koneksi, $query_tambah_obat);
+
+
+
+
+if ($cek_tambah==TRUE && $cek_tambah_obat==TRUE) {
     header("Location: obat_masuk.php?pesan=tambah_berhasil");
 } else {
     echo "Error: " . mysqli_error($koneksi);

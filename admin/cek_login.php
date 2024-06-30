@@ -25,9 +25,9 @@ if ($cek > 0) {
     if ($login['status'] == "admin") {
         $_SESSION['status'] = "admin";
         header("location:dashboard.php");
-    } elseif ($login['status'] == "petugas") {
-        $_SESSION['status'] = "petugas";
-        header("location:../petugas/index.php");
+    } elseif ($login['status'] == "apotik") {
+        $_SESSION['status'] = "apotik";
+        header("location:../apotik/index.php");
     } elseif ($login['status'] == "gudang") {
         $_SESSION['status'] = "gudang";
         header("location:../gudang/index.php");

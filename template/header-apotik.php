@@ -1,7 +1,7 @@
 <?php 
     ob_start();
     session_start();
-    if ($_SESSION['status'] != "petugas") {
+    if ($_SESSION['status'] != "apotik") {
         header("location:index.php?pesan=belum_login");
     }
 ?>
