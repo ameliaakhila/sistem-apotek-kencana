@@ -24,7 +24,7 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama Permintaan Obat</th> 
+                                                <!-- <th>Nama Permintaan Obat</th>  -->
                                                 <th>Nama Obat</th>                                                                                              
                                                 <th>Jumlah Permintaan</th>                                               
                                                 <th>Tanggal Permintaan</th>
@@ -32,28 +32,31 @@
                                                 <th>Opsi</th>
                                             </tr>
                                         </thead>
-                                        <?php 
+                                      
+                                        <tbody>
+                                            <?php 
                                             include '../koneksi.php';
                                             $no = 1;
-                                            $data = mysqli_query($koneksi, "SELECT * from tb_obat,tb_jenis_obat where tb_obat.id_jenis_obat=tb_jenis_obat.id_jenis_obat");
+                                            $data = mysqli_query($koneksi, "SELECT * from tb_obat,tb_jenis_obat,tb_permintaan_obat,tb_user where tb_user.id_user=tb_permintaan_obat.id_user AND tb_permintaan_obat.id_obat=tb_obat.id_obat AND tb_obat.id_jenis_obat=tb_jenis_obat.id_jenis_obat");
                                             while ($d = mysqli_fetch_array($data)) {
                                             ?>
-                                        <tbody>
                                             <tr>
                                                 <td><?= $no++ ?></td>
-                                                <td><?= $d['nama_obat'] ?></td>
-                                                <td><?= $d['nama_jenis_obat'] ?></td>                                              
-                                                <td><?= $d['satuan_obat'] ?></td>
-                                                <td><?= $d['stok_obat'] ?></td>
+                                                <!-- <td><?= $d['username'] ?></td> -->
+                                                <td><?= $d['nama_obat'] ?></td>                                              
+                                                <td><?= $d['jumlah_permintaan_obat'] ?></td>
+                                                <td><?= $d['tgl_permintaan_obat'] ?></td>
+                                                <td><?= $d['status_permintaan_obat'] ?></td>
                                                 <td>
-													<a href="data_obat_hapus.php?id_obat=<?= $d['id_obat']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
-                                                    <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_obat']; ?>" id=".$d['id_obat']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
-                                                    <?php include('data_obat_modal.php') ?>
+													<!-- <a href="permintaan_obat.php?id_obat=<?= $d['id_obat']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a> -->
+                                                    <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>
+                                                    <?php include('permintaan_obat_modal.php') ?>
                                                 </td>
 
                                             </tr>
+                                             <?php } ?>
                                         </tbody>
-                                        <?php } ?>
+                                       
                                     </table>
                                 </div>
                             </div>
