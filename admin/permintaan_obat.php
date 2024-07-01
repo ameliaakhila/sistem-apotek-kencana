@@ -1,5 +1,5 @@
-<?php include('../template/header-apotik.php') ?>
-<?php include('../template/header-apotik-menu.php') ?>
+<?php include('../template/header-admin.php') ?>
+<?php include('../template/header-admin-menu.php') ?>
 
 		<!--**********************************
             Content body start
@@ -18,8 +18,6 @@
                                 <div class="table-responsive">
                                     <?php include('../alert.php') ?>
 
-                                    <button data-bs-toggle="modal" data-bs-target="#tambah" class="btn btn-primary btn-xs mb-2">Tambah Obat</button>
-                                    <?php include('permintaan_obat_modal_tambah.php') ?>
                                     <table id="example3" class="display" >
                                         <thead>
                                             <tr>
@@ -70,8 +68,9 @@
                                                     <?php } ?>
                                             </td>
                                                 <td>
-													<!-- <a href="permintaan_obat.php?id_obat=<?= $d['id_obat']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a> -->
-                                                    <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>
+													<a href="permintaan_obat_hapus.php?id_permintaan_obat=<?= $d['id_permintaan_obat']; ?>" onclick="return confirm('Anda yakin Hapus data permintaan obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
+                                                    <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-primary shadow btn-xs sharp me-1" title="Detail"><i class="fas fa-eye"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#konfirmasi<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-info shadow btn-xs sharp me-1" title="Konfirmasi"><i class="fas fa-location-arrow"></i></button>
                                                     <?php include('permintaan_obat_modal.php') ?>
                                                 </td>
 

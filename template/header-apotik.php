@@ -5,7 +5,6 @@
         header("location:index.php?pesan=belum_login");
     }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +27,27 @@
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
 	<link href="../assets/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
 	<link href="../assets/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+     <!-- Datatable -->
+     <link href="../assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 	
 	<!-- Style css -->
     <link href="../assets/css/style.css" rel="stylesheet">
+
+    <!-- Daterange picker -->
+    <link href="../assets/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Clockpicker -->
+    <link href="../assets/vendor/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <!-- asColorpicker -->
+    <link href="../assets/vendor/jquery-asColorPicker/css/asColorPicker.min.css" rel="stylesheet">
+    <!-- Material color picker -->
+    <link href="../assets/vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+	
+    <!-- Pick date -->
+    <link rel="stylesheet" href="../assets/vendor/pickadate/themes/default.css">
+    <link rel="stylesheet" href="../assets/vendor/pickadate/themes/default.date.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 </head>
 <body>
@@ -58,11 +75,11 @@
         ***********************************-->
 		<div class="nav-header">
             <a href="index.html" class="brand-logo">
-            <img src="../assets/images/logo-apotek.png" alt="logo-apotek" style="max-width: 80px;">
+				<img src="../assets/images/logo-apotek.png" alt="logo-apotek" style="max-width: 80px;">
                 <?php $username = $_SESSION['username']; ?>
 				<div class="brand-title">
-					<h2 class="">Apotek</h2>
-					<span class="brand-sub-title">Management <?= $username ?></span>
+					<h2 class="">Sistem</h2>
+					<span class="brand-sub-title">Apotik Kencana</span>
 				</div>
             </a>
             <div class="nav-control">
@@ -105,7 +122,7 @@
                                         <span class="ms-2">Profile </span>
                                     </a>
                                     
-                                    <a href="../admin/cek_login.php" class="dropdown-item ai-icon">
+                                    <a href="../admin/logout.php" class="dropdown-item ai-icon">
                                         <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
                                         <span class="ms-2">Logout </span>
                                     </a>

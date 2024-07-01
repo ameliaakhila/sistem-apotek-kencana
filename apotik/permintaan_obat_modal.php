@@ -8,43 +8,52 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <table class="table table-bordered table-striped">
+                <table class="table table-bordered table-hover">
                     <tr>
-                        <td>Kode Transaksi</td>
+                        <td>Nama Obat Permintaan</td>
                         <td>
-                            <?= $d['kode_transaksi'] ?>
+                            <?= $d['nama_obat'] ?>
                         </td>
                     </tr>
                     <tr>
-                        <td>Tanggal Obat Masuk</td>
+                        <td>Jumlah Permintaan Obat</td>
                         <td>
-                            <?= $d['tgl_obat_masuk'] ?>
+                             <?= $d['jumlah_permintaan_obat'] ?>                           
                         </td>
                     </tr>
                     <tr>
-                        <td>Nama Obat</td>
+                        <td>Tanggal Permintaan Obat</td>
                         <td>
-                             <?= $d['nama_obat'] ?>                           
+                            <?= $d['tgl_permintaan_obat'] ?>
                         </td>
                     </tr>
                     <tr>
-                        <td>Nama Jenis Obat</td>
+                        <td>Status Permintaan Obat</td>
                         <td>
-                             <?= $d['nama_jenis_obat'] ?>                           
+                           <?php if($d['status_permintaan_obat'] == "proses"){ ?>
+                            <div class="bootstrap-badge">
+                                    <span class="badge badge-sm badge-warning">Proses</span>
+                                </div>
+                            <?php }elseif($d['status_permintaan_obat'] == "dikirim"){ ?>
+                                <div class="bootstrap-badge">
+                                    <span class="badge badge-sm badge-info">Dikirim</span>
+                                </div>
+                            <?php }elseif($d['status_permintaan_obat'] == "selesai"){ ?>
+                                <div class="bootstrap-badge">
+                                    <span class="badge badge-sm badge-success">Selesai</span>
+                                </div>
+                                <?php }elseif($d['status_permintaan_obat'] == "ditolak"){ ?>
+                                <div class="bootstrap-badge">
+                                    <span class="badge badge-sm badge-danger">Ditolak</span>
+                                </div>
+                            <?php }else{ ?>
+                                <div class="bootstrap-badge">
+                                    <span class="badge badge-sm badge-secondary">Error</span>
+                                </div>
+                            <?php } ?>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Jumlah Obat Masuk</td>
-                        <td>
-                            <?= $d['jumlah_obat'] ?>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Tanggal Kadaluarsa</td>
-                        <td>
-                            <?= $d['tgl_kadaluarsa'] ?>
-                        </td>
-                    </tr>
+                   
                     <tr>
                         <td>Keterangan</td>
                         <td>
