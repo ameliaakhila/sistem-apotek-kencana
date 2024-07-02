@@ -14,7 +14,7 @@
                     <tr>
                         <td>Username</td>
                         <td>
-                            <input class="form-control" type="text" name="username" value="<?= $d['username'] ?>" require>
+                            <input class="form-control" type="text" name="username" value="<?= $d['username'] ?>" placeholder="Inputkan Username" require>
                             <input type="hidden" name="id_user" value="<?= $d['id_user'] ?>">
                         </td>
                     </tr>

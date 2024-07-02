@@ -14,7 +14,7 @@
                     <tr>
                         <td>Tanggal Obat Masuk</td>
                         <td>
-                            <input name="tgl_obat_masuk" class="datepicker-default form-control">
+                            <input name="tgl_obat_masuk" class="datepicker-default form-control" placeholder="Inputkan Tanggal Obat Masuk">
                         </td>
                     </tr>
                     <tr>
@@ -35,19 +35,19 @@
                     <tr>
                         <td>Jumlah Obat Masuk</td>
                         <td>
-                            <input class="form-control" type="number" name="jumlah_obat" value="" require>
+                            <input class="form-control" type="number" name="jumlah_obat" value="" placeholder="Inputkan Jumlah Obat" require>
                         </td>
                     </tr>
                     <tr>
                         <td>Tanggal Kadaluarsa</td>
                         <td>
-                            <input name="tgl_kadaluarsa"  value="" class="datepicker-default form-control" id="datepicker">
+                            <input name="tgl_kadaluarsa"  value="" class="datepicker-default form-control" id="datepicker" placeholder="Inputkan Tanggal Kadaluarsa Obat">
                         </td>
                     </tr>
                     <tr>
                         <td>Keterangan</td>
                         <td>
-                            <input class="form-control" type="text" name="keterangan" value="" require>
+                            <input class="form-control" type="text" name="keterangan" value="" placeholder="Inputkan Keterangan Obat" require>
                         </td>
                     </tr>
                 </table>
