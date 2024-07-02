@@ -40,10 +40,9 @@
                                             ?>
                                             <tr>
                                                 <td><?= $no++ ?></td>
-                                                <!-- <td><?= $d['username'] ?></td> -->
                                                 <td><?= $d['nama_obat'] ?></td>                                              
-                                                <td><center><?= $d['jumlah_permintaan_obat'] ?></td>
-                                                <td><?= $d['tgl_permintaan_obat'] ?></td>
+                                                <td><?= $d['jumlah_permintaan_obat'] ?></td>
+                                                <td><?= date('d-m-Y', strtotime($d['tgl_permintaan_obat'])); ?></td>
                                                 <td>
                                                     <?php if($d['status_permintaan_obat'] == "proses"){ ?>
                                                         <div class="bootstrap-badge">

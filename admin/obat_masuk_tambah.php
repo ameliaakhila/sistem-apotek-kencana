@@ -32,10 +32,10 @@ $kode_transaksi = 'BM-'. $tanggal_hari_ini . '-' . $nomor_urut_format;
 
 // akhir pembuatan kode transaksi
 
-$tgl_obat_masuk = date('d-n-Y', strtotime($_POST['tgl_obat_masuk']));
+$tgl_obat_masuk = date('y-m-d', strtotime($_POST['tgl_obat_masuk']));
 $id_obat = $_POST['id_obat'];
 $jumlah_obat = $_POST['jumlah_obat'];
-$tgl_kadaluarsa = date('d-n-Y', strtotime($_POST['tgl_kadaluarsa']));
+$tgl_kadaluarsa = date('y-m-d', strtotime($_POST['tgl_kadaluarsa']));
 $keterangan = $_POST['keterangan'];
 
 

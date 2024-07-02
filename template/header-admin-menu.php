@@ -2,15 +2,21 @@
             <div class="dlabnav-scroll">
 				<ul class="metismenu" id="menu">
 
-                    <li><a href="dashboard.php" class="" aria-expanded="false">
+                    <li><a href="../admin/dashboard.php" class="" aria-expanded="false">
 							<i class="fas fa-home"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
 					</li>
 					<li>
-						<a href="permintaan_obat.php">
+						<a href="../permintaan/permintaan_obat.php">
 							<i class="fas fa-location-arrow"></i>
 							<span class="nav-text">Permintaan Obat</span>
+						</a>
+					</li>
+					<li>
+						<a href="../permintaan/laporan_permintaan.php">
+						<i class="fas fa-solid fa-file-medical"></i>
+						<span class="nav-text">Laporan Permintaan</span>
 						</a>
 					</li>
 
@@ -19,21 +25,27 @@
 							<span class="nav-text">Kelola Obat</span>
 						</a>
                         <ul aria-expanded="false">
-							<li><a href="data_obat.php">Data Obat</a></li>
+							<li><a href="../admin/data_obat.php">Data Obat</a></li>
 							<li><a href="jenis_obat.php">Jenis Obat</a></li>
 						</ul>
 
                     </li>
 
 					<li>
-						<a href="obat_masuk.php">
+						<a href="../admin/obat_masuk.php">
 							<i class="fas fa-solid fa-arrow-down"></i>
 							<span class="nav-text">Data Obat Masuk</span>
 						</a>
 					</li>
+					<li>
+						<a href="../laporan/laporan_obat_masuk.php">
+							<i class="fas fa-solid fa-file-medical"></i>
+							<span class="nav-text fs-6">Laporan Obat Masuk</span>
+						</a>
+					</li>
 					
 					<li>
-						<a href="kelola_akun.php">
+						<a href="../admin/kelola_akun.php">
 							<i class="fas fa-users"></i>
 							<span class="nav-text">Kelola Akun</span>
 						</a>
