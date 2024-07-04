@@ -26,10 +26,9 @@
                                                 <th>No</th>
                                                 <th>Nama obat</th> 
                                                 <th>Jenis obat</th>                                                                                              
-                                                <th>Satuan Obat</th>                                               
-                                                <th>Stok Obat</th>
-                                              
-                                                <th>Opsi</th>
+                                                <th class="text-center">Satuan Obat</th>                                               
+                                                <th class="text-center">Stok Obat</th>
+                                                <th >Opsi</th>
                                             </tr>
                                         </thead>
                                         <?php 
@@ -43,8 +42,8 @@
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $d['nama_obat'] ?></td>
                                                 <td><?= $d['nama_jenis_obat'] ?></td>                                              
-                                                <td><?= $d['satuan_obat'] ?></td>
-                                                <td><?= $d['stok_obat'] ?></td>
+                                                <td class="text-center"><?= $d['satuan_obat'] ?></td>
+                                                <td class="text-center"><?= $d['stok_obat'] ?></td>
                                                 <td>
 													<a href="data_obat_hapus.php?id_obat=<?= $d['id_obat']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
                                                     <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_obat']; ?>" id=".$d['id_obat']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>

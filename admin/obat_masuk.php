@@ -27,8 +27,8 @@
                                                 <th>Kode Transaksi</th>
                                                 <th>Tanggal</th>
                                                 <th>Nama Obat</th>
-                                                <th>Jumlah Obat</th>
-                                                <th>Opsi</th>
+                                                <th class="text-center">Jumlah Obat</th>
+                                                <th class="text-center">Opsi</th>
                                             </tr>
                                         </thead>
                                       
@@ -45,8 +45,8 @@
                                                 <td><?= $d['kode_transaksi'] ?></td>
                                                 <td><?= date('d M Y', strtotime($d['tgl_obat_masuk'])); ?></td>                                              
                                                 <td><?= $d['nama_obat'] ?></td>                                              
-                                                <td><?= $d['jumlah_obat'] ?></td>
-                                                <td>
+                                                <td class="text-center"><?= $d['jumlah_obat'] ?></td>
+                                                <td class="text-center">
 													<a href="obat_masuk_hapus.php?id_obat_masuk=<?= $d['id_obat_masuk']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
                                                     <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_obat_masuk']; ?>" id=".$d['id_obat_masuk']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
                                                     <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_obat_masuk']; ?>" id=".$d['id_obat_masuk']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>

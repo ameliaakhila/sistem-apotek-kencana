@@ -24,10 +24,10 @@
                                                 <th>No</th>
                                                 <!-- <th>Nama Permintaan Obat</th>  -->
                                                 <th>Nama Obat</th>                                                                                              
-                                                <th>Jumlah Permintaan</th>                                               
-                                                <th>Tanggal Permintaan</th>
+                                                <th class="text-center">Jumlah Permintaan</th>                                               
+                                                <th class="text-center">Tanggal Permintaan</th>
                                                 <th>Status</th>
-                                                <th>Opsi</th>
+                                                <th class="text-center">Opsi</th>
                                             </tr>
                                         </thead>
                                       
@@ -41,8 +41,8 @@
                                             <tr>
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $d['nama_obat'] ?></td>                                              
-                                                <td><?= $d['jumlah_permintaan_obat'] ?></td>
-                                                <td><?= date('d-m-Y', strtotime($d['tgl_permintaan_obat'])); ?></td>
+                                                <td class="text-center"><?= $d['jumlah_permintaan_obat'] ?></td>
+                                                <td class="text-center"><?= date('d M Y', strtotime($d['tgl_permintaan_obat'])); ?></td>
                                                 <td>
                                                     <?php if($d['status_permintaan_obat'] == "proses"){ ?>
                                                         <div class="bootstrap-badge">
@@ -66,7 +66,7 @@
                                                         </div>
                                                     <?php } ?>
                                             </td>
-                                                <td>
+                                                <td class="text-center">
 													<a href="permintaan_obat_hapus.php?id_permintaan_obat=<?= $d['id_permintaan_obat']; ?>" onclick="return confirm('Anda yakin Hapus data permintaan obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
                                                     <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-primary shadow btn-xs sharp me-1" title="Detail"><i class="fas fa-eye"></i></button>
                                                     <button data-bs-toggle="modal" data-bs-target="#konfirmasi<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-info shadow btn-xs sharp me-1" title="Konfirmasi"><i class="fas fa-location-arrow"></i></button>
