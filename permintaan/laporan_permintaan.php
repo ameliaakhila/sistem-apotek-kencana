@@ -18,16 +18,56 @@
                                 <div class="table-responsive">
                                     <?php include('../alert.php') ?>
 
+                                    <a href="laporan_permintaan_cetak_full.php" class="btn btn-primary btn-sm"><i data-feather="plus"></i> Download Full Rekap</a><br><br>
+                                    <tr>
+                                        <form action="laporan_permintaan_cetak_bulanan.php" method="post">
+                                        <td>
+                                            Bulan
+                                            <select name="bulan" id="">
+                                                <option value="01">Januari</option>
+                                                <option value="02">Februari</option>
+                                                <option value="03">Maret</option>
+                                                <option value="04">April</option>
+                                                <option value="05">Mei</option>
+                                                <option value="06">Juni</option>
+                                                <option value="07">Juli</option>
+                                                <option value="08">Agustus</option>
+                                                <option value="09">September</option>
+                                                <option value="10">Oktober</option>
+                                                <option value="11">November</option>
+                                                <option value="12">Desember</option>
+                                            </select>
+                                            <input type="submit" class="btn btn-primary btn-sm" value="Download" >
+                                            </form><br>
+                                        </td>
+                                    </tr> 
+                                    <tr>
+                                        <form action="laporan_permintaan_cetak_tahunan.php" method="post">
+                                        <td>
+                                            Tahun
+                                            <select name="tahun" id="">
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                                <option value="2027">2027</option>
+                                                <option value="2028">2028</option>
+                                                <option value="2029">2029</option>
+                                                <option value="2030">2030</option>
+                                            </select>
+                                            <input type="submit" class="btn btn-primary btn-sm" value="Download" >
+                                            </form><br>
+                                        </td>
+                                    </tr>
+
                                     <table id="example3" class="display" >
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <!-- <th>Nama Permintaan Obat</th>  -->
                                                 <th>Nama Obat</th>                                                                                              
-                                                <th>Jumlah Permintaan</th>                                               
-                                                <th>Tanggal Permintaan</th>
+                                                <th class="text-center">Jumlah Permintaan</th>                                               
+                                                <th class="text-center">Tanggal Permintaan</th>
                                                 <th>Status</th>
-                                                <th>Opsi</th>
+                                                <th class="text-center">Opsi</th>
                                             </tr>
                                         </thead>
                                       
@@ -42,8 +82,8 @@
                                                 <td><?= $no++ ?></td>
                                                 <!-- <td><?= $d['username'] ?></td> -->
                                                 <td><?= $d['nama_obat'] ?></td>                                              
-                                                <td><center><?= $d['jumlah_permintaan_obat'] ?></td>
-                                                <td><?= $d['tgl_permintaan_obat'] ?></td>
+                                                <td class="text-center"><?= $d['jumlah_permintaan_obat'] ?></td>
+                                                <td class="text-center"><?= date('d M Y', strtotime($d['tgl_permintaan_obat'])) ?></td>
                                                 <td>
                                                     <?php if($d['status_permintaan_obat'] == "proses"){ ?>
                                                         <div class="bootstrap-badge">
@@ -67,7 +107,7 @@
                                                         </div>
                                                     <?php } ?>
                                             </td>
-                                                <td>
+                                                <td class="text-center">
 													<a href="permintaan_obat_hapus.php?id_permintaan_obat=<?= $d['id_permintaan_obat']; ?>" onclick="return confirm('Anda yakin Hapus data permintaan obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
                                                     <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-primary shadow btn-xs sharp me-1" title="Detail"><i class="fas fa-eye"></i></button>
                                                     <button data-bs-toggle="modal" data-bs-target="#konfirmasi<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-info shadow btn-xs sharp me-1" title="Konfirmasi"><i class="fas fa-location-arrow"></i></button>

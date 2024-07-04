@@ -13,12 +13,12 @@
                     <tr>
                         <td>Username</td>
                         <td>
-                            <input class="form-control" type="text" name="username" require>
+                            <input class="form-control" type="text" name="username" placeholder="Inputkan Username" require>
                         </td>
                     </tr>
                     <td>Password</td>
                         <td>
-                            <input class="form-control" type="text" name="password" require>
+                            <input class="form-control" type="text" name="password" placeholder="Inputkan Password" require>
                         </td>
                     </tr>
                     <tr>

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jul 01, 2024 at 08:18 PM
--- Server version: 10.1.38-MariaDB
--- PHP Version: 5.6.40
+-- Host: 127.0.0.1:3306
+-- Waktu pembuatan: 04 Jul 2024 pada 21.59
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,16 +24,16 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_jenis_obat`
+-- Struktur dari tabel `tb_jenis_obat`
 --
 
 CREATE TABLE `tb_jenis_obat` (
   `id_jenis_obat` int(11) NOT NULL,
   `nama_jenis_obat` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Dumping data for table `tb_jenis_obat`
+-- Dumping data untuk tabel `tb_jenis_obat`
 --
 
 INSERT INTO `tb_jenis_obat` (`id_jenis_obat`, `nama_jenis_obat`) VALUES
@@ -47,7 +46,7 @@ INSERT INTO `tb_jenis_obat` (`id_jenis_obat`, `nama_jenis_obat`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_obat`
+-- Struktur dari tabel `tb_obat`
 --
 
 CREATE TABLE `tb_obat` (
@@ -56,10 +55,10 @@ CREATE TABLE `tb_obat` (
   `satuan_obat` varchar(20) NOT NULL,
   `stok_obat` int(11) NOT NULL,
   `id_jenis_obat` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_obat`
+-- Dumping data untuk tabel `tb_obat`
 --
 
 INSERT INTO `tb_obat` (`id_obat`, `nama_obat`, `satuan_obat`, `stok_obat`, `id_jenis_obat`) VALUES
@@ -82,7 +81,7 @@ INSERT INTO `tb_obat` (`id_obat`, `nama_obat`, `satuan_obat`, `stok_obat`, `id_j
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_obat_masuk`
+-- Struktur dari tabel `tb_obat_masuk`
 --
 
 CREATE TABLE `tb_obat_masuk` (
@@ -93,20 +92,23 @@ CREATE TABLE `tb_obat_masuk` (
   `jumlah_obat` varchar(100) NOT NULL,
   `tgl_kadaluarsa` varchar(20) NOT NULL,
   `keterangan` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_obat_masuk`
+-- Dumping data untuk tabel `tb_obat_masuk`
 --
 
 INSERT INTO `tb_obat_masuk` (`id_obat_masuk`, `kode_transaksi`, `tgl_obat_masuk`, `id_obat`, `jumlah_obat`, `tgl_kadaluarsa`, `keterangan`) VALUES
-(12, 'BM-20240630-0001', '01-7-2024', 9, '10', '03-1-2024', 'obat masuk'),
-(15, 'BM-20240630-0013', '01-7-2024', 10, '15', '09-7-2024', 'test2');
+(12, 'BM-20240630-0001', '2024-07-01', 9, '10', '03-1-2028', 'obat masuk'),
+(15, 'BM-20240630-0013', '2024-07-01', 10, '15', '09-7-2028', 'obat masuk'),
+(16, 'BM-20240702-0016', '2024-07-01', 11, '10', '07-01-2024', 'obat keras'),
+(17, 'BM-20240702-0017', '2024-08-02', 12, '1', '16-4-2024', 'obat keras'),
+(18, 'BM-20240702-0018', '2024-07-02', 14, '2', '02-05-2024', 'obat keras');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_permintaan_obat`
+-- Struktur dari tabel `tb_permintaan_obat`
 --
 
 CREATE TABLE `tb_permintaan_obat` (
@@ -118,69 +120,67 @@ CREATE TABLE `tb_permintaan_obat` (
   `status_permintaan_obat` varchar(20) NOT NULL,
   `keterangan_apotik` varchar(100) NOT NULL,
   `keterangan_farmasi` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_permintaan_obat`
+-- Dumping data untuk tabel `tb_permintaan_obat`
 --
 
 INSERT INTO `tb_permintaan_obat` (`id_permintaan_obat`, `id_user`, `id_obat`, `jumlah_permintaan_obat`, `tgl_permintaan_obat`, `status_permintaan_obat`, `keterangan_apotik`, `keterangan_farmasi`) VALUES
-(1, 5, 23, 10, '10-10-2024', 'proses', 'proses', ''),
-(3, 5, 15, 2, '01-07-2024 15:04:21', 'ditolak', '', 'tes');
+(1, 4, 9, 10, '01-07-2025 15:02:21', 'dikirim', 'memenuhi', 'dipesan ke pbf'),
+(2, 4, 10, 2, '01-07-2024 15:04:21', 'ditolak', 'tidak memehuni', 'tidak menyantumkan resep dokter'),
+(3, 4, 11, 10, '02-07-2024 14:09:04', 'selesai', 'obat masuk', 'masuk'),
+(4, 4, 12, 2, '03-08-2024 01:30:14', 'proses', 'Resep', ''),
+(5, 4, 14, 3, '03-07-2024  01:31:12', 'proses', '1', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_user`
+-- Struktur dari tabel `tb_user`
 --
 
 CREATE TABLE `tb_user` (
   `id_user` int(11) NOT NULL,
-  `username` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `password` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `status` varchar(50) CHARACTER SET latin1 NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `username` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `password` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `status` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_user`
+-- Dumping data untuk tabel `tb_user`
 --
 
 INSERT INTO `tb_user` (`id_user`, `username`, `password`, `status`) VALUES
 (1, 'admin', 'd033e22ae348aeb5660fc2140aec35850c4da997', 'admin'),
 (2, 'gudang', 'a80dd043eb5b682b4148b9fc2b0feabb2c606fff', 'petugas'),
 (3, 'petugas1', '8cb2237d0679ca88db6464eac60da96345513964', 'petugas'),
-(4, 'admin2', '315f166c5aca63a157f7d41007675cb44a948b33', 'admin'),
-(5, 'apotik', '68f88e05d35e44e753ec09c76c47b0261ece0100', 'apotik');
+(4, 'apotik', '68f88e05d35e44e753ec09c76c47b0261ece0100', 'apotik');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `tb_jenis_obat`
+-- Indeks untuk tabel `tb_jenis_obat`
 --
 ALTER TABLE `tb_jenis_obat`
   ADD PRIMARY KEY (`id_jenis_obat`);
 
 --
--- Indexes for table `tb_obat`
+-- Indeks untuk tabel `tb_obat`
 --
 ALTER TABLE `tb_obat`
-  ADD PRIMARY KEY (`id_obat`),
-  ADD KEY `id_obat_2` (`id_obat`),
-  ADD KEY `id_obat_3` (`id_obat`),
-  ADD KEY `id_obat_4` (`id_obat`),
-  ADD KEY `id_jenis_obat` (`id_jenis_obat`);
+  ADD PRIMARY KEY (`id_obat`);
 
 --
--- Indexes for table `tb_obat_masuk`
+-- Indeks untuk tabel `tb_obat_masuk`
 --
 ALTER TABLE `tb_obat_masuk`
   ADD PRIMARY KEY (`id_obat_masuk`),
   ADD KEY `id_obat` (`id_obat`);
 
 --
--- Indexes for table `tb_permintaan_obat`
+-- Indeks untuk tabel `tb_permintaan_obat`
 --
 ALTER TABLE `tb_permintaan_obat`
   ADD PRIMARY KEY (`id_permintaan_obat`),
@@ -188,67 +188,44 @@ ALTER TABLE `tb_permintaan_obat`
   ADD KEY `id_obat` (`id_obat`);
 
 --
--- Indexes for table `tb_user`
+-- Indeks untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tb_jenis_obat`
+-- AUTO_INCREMENT untuk tabel `tb_jenis_obat`
 --
 ALTER TABLE `tb_jenis_obat`
-  MODIFY `id_jenis_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_jenis_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
--- AUTO_INCREMENT for table `tb_obat`
+-- AUTO_INCREMENT untuk tabel `tb_obat`
 --
 ALTER TABLE `tb_obat`
   MODIFY `id_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `tb_obat_masuk`
+-- AUTO_INCREMENT untuk tabel `tb_obat_masuk`
 --
 ALTER TABLE `tb_obat_masuk`
-  MODIFY `id_obat_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_obat_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT for table `tb_permintaan_obat`
+-- AUTO_INCREMENT untuk tabel `tb_permintaan_obat`
 --
 ALTER TABLE `tb_permintaan_obat`
-  MODIFY `id_permintaan_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_permintaan_obat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `tb_user`
+-- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `tb_obat`
---
-ALTER TABLE `tb_obat`
-  ADD CONSTRAINT `tb_obat_ibfk_1` FOREIGN KEY (`id_jenis_obat`) REFERENCES `tb_jenis_obat` (`id_jenis_obat`);
-
---
--- Constraints for table `tb_obat_masuk`
---
-ALTER TABLE `tb_obat_masuk`
-  ADD CONSTRAINT `tb_obat_masuk_ibfk_1` FOREIGN KEY (`id_obat`) REFERENCES `tb_obat` (`id_obat`);
-
---
--- Constraints for table `tb_permintaan_obat`
---
-ALTER TABLE `tb_permintaan_obat`
-  ADD CONSTRAINT `tb_permintaan_obat_ibfk_1` FOREIGN KEY (`id_obat`) REFERENCES `tb_obat` (`id_obat`),
-  ADD CONSTRAINT `tb_permintaan_obat_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `tb_user` (`id_user`);
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

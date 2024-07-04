@@ -57,7 +57,7 @@
                     <tr>
                         <td>Keterangan</td>
                         <td>
-                            <?= $d['keterangan'] ?>
+                            <?= $d['keterangan_apotik'] ?>
                         </td>
                     </tr>
                 </table>

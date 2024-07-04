@@ -13,7 +13,7 @@
                     <tr>
                         <td>Nama Obat</td>
                         <td>
-                            <input class="form-control" type="text" name="nama_obat" value="" require>
+                            <input class="form-control" type="text" name="nama_obat" value="" placeholder="Inputkan Obat" require>
                         </td>
                     </tr>
                     <tr>

@@ -27,13 +27,13 @@
                         <tr>
                             <td>Jumlah Permintaan Obat</td>
                             <td>
-                               <input type="number" name="jumlah_permintaan_obat" class="form-control">                      
+                               <input type="number" name="jumlah_permintaan_obat" class="form-control" placeholder="Inputkan Jumlah Permintaan">                      
                             </td>
                         </tr>
                         <tr>
                             <td>Keterangan</td>
                             <td>
-                               <input type="text" name="keterangan_apotik" class="form-control">                      
+                               <input type="text" name="keterangan_apotik" class="form-control" placeholder="Inputkan Keterangan">                      
                             </td>
                         </tr>    
                     </table>
