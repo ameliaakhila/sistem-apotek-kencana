@@ -1,5 +1,5 @@
-<?php include('../template/header-apotik.php') ?>
-<?php include('../template/header-apotik-menu.php') ?>
+<?php include('../template/header-apotek.php') ?>
+<?php include('../template/header-apotek-menu.php') ?>
 
 		<!--**********************************
             Content body start

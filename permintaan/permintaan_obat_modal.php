@@ -55,9 +55,9 @@
                     </tr>
                    
                     <tr>
-                        <td>Keterangan Apotik</td>
+                        <td>Keterangan Apotek</td>
                         <td>
-                            <?= $d['keterangan_apotik'] ?>
+                            <?= $d['keterangan_apotek'] ?>
                         </td>
                     </tr>
                     <tr>
@@ -138,9 +138,9 @@
                     </tr>
                    
                     <tr>
-                        <td>Keterangan Apotik</td>
+                        <td>Keterangan Apotek</td>
                         <td>
-                            <?= $d['keterangan_apotik'] ?>
+                            <?= $d['keterangan_apotek'] ?>
                         </td>
                     </tr>
 

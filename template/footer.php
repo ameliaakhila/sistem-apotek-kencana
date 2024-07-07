@@ -3,7 +3,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Apotikkencana &amp; Developed by <a href="#" target="_blank">Apotikkencana</a> 2024</p>
+                <p>Copyright © apotekkencana &amp; Developed by <a href="#" target="_blank">apotekkencana</a> 2024</p>
             </div>
         </div>
         <!--**********************************

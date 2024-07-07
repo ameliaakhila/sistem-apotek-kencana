@@ -22,7 +22,6 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <!-- <th>Nama Permintaan Obat</th>  -->
                                                 <th>Nama Obat</th>                                                                                              
                                                 <th class="text-center">Jumlah Permintaan</th>                                               
                                                 <th class="text-center">Tanggal Permintaan</th>

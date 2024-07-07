@@ -33,7 +33,7 @@
                         <tr>
                             <td>Keterangan</td>
                             <td>
-                               <input type="text" name="keterangan_apotik" class="form-control" placeholder="Inputkan Keterangan">                      
+                               <input type="text" name="keterangan_apotek" class="form-control" placeholder="Inputkan Keterangan">                      
                             </td>
                         </tr>    
                     </table>
