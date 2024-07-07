@@ -23,9 +23,9 @@
                                     <table id="example3" class="table table-borderd" >
                                         <thead>
                                             <tr>
-                                                <th>No</th>
-                                                <th>Nama Jenis obat</th>                                               
-                                                <th>Opsi</th>
+                                                <th style="text-align:center;">No</th>
+                                                <th style="text-align:center;">Nama Jenis obat</th>                                               
+                                                <th style="text-align:center;">Opsi</th>
                                             </tr>
                                         </thead>
                                         <?php 
@@ -36,15 +36,17 @@
                                             ?>
                                         <tbody>
                                             <tr>
-                                                <td><?= $no++ ?></td>
-                                                <td><?= $d['nama_jenis_obat'] ?></td>                                              
+                                                <td style="text-align:center;"><?= $no++ ?></td>
+                                                <td style="text-align:center;"><?= $d['nama_jenis_obat'] ?></td>                                              
                                                 <td>
-													<a href="jenis_obat_hapus.php?id_jenis_obat=<?php echo $d['id_jenis_obat']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_jenis_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
+                                                    <center>
+                                                    <a href="jenis_obat_hapus.php?id_jenis_obat=<?php echo $d['id_jenis_obat']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_jenis_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
                                                     <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_jenis_obat']; ?>" id=".$d['id_jenis_obat']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
                                                     <?php include('jenis_obat_modal.php') ?>
+                                                    </center>
                                                 </td>
 
-                                            </tr>
+                                            </tr> 
                                         </tbody>
                                         <?php } ?>
                                     </table>

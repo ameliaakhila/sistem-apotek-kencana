@@ -14,10 +14,14 @@
 						</a>
 					</li>
 					<li>
-						<a href="../permintaan/laporan_permintaan.php">
-						<i class="fas fa-solid fa-file-medical"></i>
-						<span class="nav-text">Laporan Permintaan</span>
+						<a class="has-arrow " href="javascript:void()" aria-expanded="false">
+							<i class="fas fa-solid fa-file-medical"></i>
+							<span class="nav-text">Laporan</span>
 						</a>
+						<ul>
+							<li><a href="../permintaan/laporan_exel_permintaan.php">Laporan Exel</a></li>
+							<li><a href="../permintaan/laporan_pdf_permintaan.php">Laporan PDF</a></li>
+						</ul>
 					</li>
 
 					<li><a class="has-arrow " href="javascript:void()" aria-expanded="false">
@@ -26,22 +30,25 @@
 						</a>
                         <ul aria-expanded="false">
 							<li><a href="../admin/data_obat.php">Data Obat</a></li>
-							<li><a href="jenis_obat.php">Jenis Obat</a></li>
+							<li><a href="../admin/jenis_obat.php">Jenis Obat</a></li>
 						</ul>
-
                     </li>
 
 					<li>
-						<a href="../admin/obat_masuk.php">
+						<a href="../obat_masuk/obat_masuk.php">
 							<i class="fas fa-solid fa-arrow-down"></i>
 							<span class="nav-text">Data Obat Masuk</span>
 						</a>
 					</li>
 					<li>
-						<a href="../laporan/laporan_obat_masuk.php">
+						<a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-solid fa-file-medical"></i>
-							<span class="nav-text fs-6">Laporan Obat Masuk</span>
+							<span class="nav-text">Laporan Obat</span>
 						</a>
+						<ul>
+							<li><a href="../obat_masuk/laporan_exel_obat_masuk.php">Laporan Exel</a></li>
+							<li><a href="../obat_masuk/laporan_pdf_obat_masuk.php">Laporan PDF</a></li>
+						</ul>
 					</li>
 					
 					<li>

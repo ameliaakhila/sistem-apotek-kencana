@@ -12,15 +12,14 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Data Permintaan Obat</h4>
+                                <h4 class="card-title">Cetak Permintaan Obat</h4>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <?php include('../alert.php') ?>
-
-                                    <a href="laporan_permintaan_cetak_full.php" class="btn btn-primary btn-sm"><i data-feather="plus"></i> Download Full Rekap</a><br><br>
+                                    <a href="laporan_pdf_cetak_full.php" class="btn btn-primary btn-sm"><i data-feather="plus"></i> Download Full Rekap</a><br><br>
                                     <tr>
-                                        <form action="laporan_permintaan_cetak_bulanan.php" method="post">
+                                        <form action="laporan_pdf_cetak_bulanan.php" method="post">
                                         <td>
                                             Bulan
                                             <select name="bulan" id="">
@@ -42,7 +41,7 @@
                                         </td>
                                     </tr> 
                                     <tr>
-                                        <form action="laporan_permintaan_cetak_tahunan.php" method="post">
+                                        <form action="laporan_pdf_cetak_tahunan.php" method="post">
                                         <td>
                                             Tahun
                                             <select name="tahun" id="">
@@ -64,13 +63,12 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Nama</th>                                                                                              
-                                                <th class="text-center">Nama Obat</th>                                            
-                                                <th class="text-center">Jumlah Permintaan</th>
-                                                <th class="text-center">Tanggal Permintaan</th>                                             
-                                                <th class="text-center">Keterangan Apotik</th>
-                                                <th class="text-center">Keterangan Farmasi</th>
-                                                <th>Status</th>
-                                                <th class="text-center">Opsi</th>
+                                                <th style="text-align:center;">Nama Obat</th>                                            
+                                                <th style="text-align:center;">Jumlah Permintaan</th>
+                                                <th style="text-align:center;">Tanggal Permintaan</th>                                             
+                                                <th style="text-align:center;">Keterangan Apotik</th>
+                                                <th style="text-align:center;">Keterangan Farmasi</th>
+                                                <th style="text-align:center;">Status</th>
                                             </tr>
                                         </thead>
                                       
@@ -85,11 +83,11 @@
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $d['username'] ?></td>
                                                 <td><?= $d['nama_obat'] ?></td>                                              
-                                                <td class="text-center"><?= $d['jumlah_permintaan_obat'] ?></td>
-                                                <td class="text-center"><?= date('d M Y', strtotime($d['tgl_permintaan_obat'])) ?></td>                                                
-                                                <td class="text-center"><?= $d['keterangan_apotek'] ?></td>
-                                                <td class="text-center"><?= $d['keterangan_farmasi'] ?></td>
-                                                <td>
+                                                <td style="text-align:center;"><?= $d['jumlah_permintaan_obat'] ?></td>
+                                                <td style="text-align:center;"><?= date('d M Y', strtotime($d['tgl_permintaan_obat'])) ?></td>                                                
+                                                <td style="text-align:center;"><?= $d['keterangan_apotek'] ?></td>
+                                                <td style="text-align:center;"><?= $d['keterangan_farmasi'] ?></td>
+                                                <td style="text-align:center;">
                                                     <?php if($d['status_permintaan_obat'] == "proses"){ ?>
                                                         <div class="bootstrap-badge">
                                                             <span class="badge badge-sm badge-warning">Proses</span>
@@ -111,12 +109,6 @@
                                                             <span class="badge badge-sm badge-secondary">Error</span>
                                                         </div>
                                                     <?php } ?>
-                                            </td>
-                                                <td class="text-center">
-													<a href="permintaan_obat_hapus.php?id_permintaan_obat=<?= $d['id_permintaan_obat']; ?>" onclick="return confirm('Anda yakin Hapus data permintaan obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
-                                                    <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-primary shadow btn-xs sharp me-1" title="Detail"><i class="fas fa-eye"></i></button>
-                                                    <button data-bs-toggle="modal" data-bs-target="#konfirmasi<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-info shadow btn-xs sharp me-1" title="Konfirmasi"><i class="fas fa-location-arrow"></i></button>
-                                                    <?php include('laporan_permintaan_modal.php') ?>
                                                 </td>
 
                                             </tr>

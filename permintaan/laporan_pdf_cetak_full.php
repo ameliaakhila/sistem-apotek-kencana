@@ -4,9 +4,6 @@ if ($_SESSION['status'] != "admin") {
     header("location:login.php?pesan=belum_login");
     exit;
 }
-
-header("Content-type: application/vnd-ms-excel");
-header("Content-Disposition: attachment; filename=Laporan permintaan lengkap.xls");
 ?>
 
 <!DOCTYPE html>
@@ -43,17 +40,21 @@ header("Content-Disposition: attachment; filename=Laporan permintaan lengkap.xls
     </style>
 </head>
 <body>
+    <h1 style="text-align: center;">Laporan Permintaan Obat</h1>
     <table id="tabel_js" class="table table-primary">
     <thead>
         <tr>
             <th>No</th>
-            <th>Nama Obat</th>                                                                                              
-            <th>Jumlah Permintaan</th>                                               
-            <th>Tanggal Permintaan</th>
+            <th>Nama</th>                                                                                              
+            <th>Nama Obat</th>                                            
+            <th>Jumlah Permintaan</th>
+            <th>Tanggal Permintaan</th>                                             
+            <th>Keterangan Apotek</th>
+            <th>Keterangan Farmasi</th>
             <th>Status</th>
         </tr>
     </thead>
-    
+
     <tbody>
         <?php 
         include '../koneksi.php';
@@ -62,17 +63,22 @@ header("Content-Disposition: attachment; filename=Laporan permintaan lengkap.xls
         while ($d = mysqli_fetch_array($data)) {
         ?>
         <tr>
-            <td><?= $no++ ?></td>
-            <!-- <td><?= $d['username'] ?></td> -->
-            <td><?= $d['nama_obat'] ?></td>                                              
-            <td><?= $d['jumlah_permintaan_obat'] ?></td>
-            <td><?= $d['tgl_permintaan_obat'] ?></td>
-            <td><?= $d['status_permintaan_obat'] ?></td>
+            <td align="center"><?= $no++ ?></td>
+            <td align="center"><?= $d['username'] ?></td>
+            <td align="center"><?= $d['nama_obat'] ?></td>                                              
+            <td align="center"><?= $d['jumlah_permintaan_obat'] ?></td>
+            <td align="center"><?= $d['tgl_permintaan_obat'] ?></td>
+            <td align="center"><?= $d['keterangan_apotek'] ?></td>
+            <td align="center"><?= $d['keterangan_farmasi'] ?></td>
+            <td align="center"><?= $d['status_permintaan_obat'] ?></td>
         </tr>
         <?php 
         }
         ?>
         </tbody>
     </table>
+    <script>
+		window.print();
+	</script>
 </body>
 </html>

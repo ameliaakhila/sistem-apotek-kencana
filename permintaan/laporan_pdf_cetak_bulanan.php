@@ -56,19 +56,17 @@ if ($_SESSION['status'] != "admin") {
 		padding: 8px 10px;
 	}
 	</style>
-<?php 
-    // Activate these headers to enable Excel export
-    header("Content-type: application/vnd-ms-excel");
-    header("Content-Disposition: attachment; filename=Laporan permintaan bulanan.xls");
-?>
-
+	    <h1 style="text-align: center;">Laporan Permintaan Obat</h1>
 	<table id="tabel_js" class="table table-primary">
 		<thead>
 			<tr>
 				<th>No</th>
-				<th>Nama Obat</th>                                                                                              
-				<th>Jumlah Permintaan</th>                                               
-				<th>Tanggal Permintaan</th>
+				<th>Nama</th>                                                                                              
+				<th>Nama Obat</th>                                            
+				<th>Jumlah Permintaan</th>
+				<th>Tanggal Permintaan</th>                                             
+				<th>Keterangan Apotek</th>
+				<th>Keterangan Farmasi</th>
 				<th>Status</th>
 			</tr>
 		</thead>
@@ -77,20 +75,28 @@ if ($_SESSION['status'] != "admin") {
 			<?php 
 			include '../koneksi.php';
 			$no = 1;
-			$data = mysqli_query($koneksi, "SELECT * FROM `tb_permintaan_obat`,`tb_obat`
-											WHERE MONTH(STR_TO_DATE(`tgl_permintaan_obat`, '%d-%m-%Y')) = $bulan AND tb_permintaan_obat.id_obat=tb_obat.id_obat");
+			$data = mysqli_query($koneksi, "SELECT * FROM `tb_permintaan_obat`
+											JOIN tb_obat ON tb_permintaan_obat.id_obat = tb_obat.id_obat
+                                			JOIN tb_user ON tb_user.id_user = tb_permintaan_obat.id_user
+											WHERE MONTH(STR_TO_DATE(`tgl_permintaan_obat`, '%d-%m-%Y')) = $bulan");
 			while ($d = mysqli_fetch_array($data)) {
 			?>
 			<tr>
-				<td><?= $no++ ?></td>
-				<td><?= $d['nama_obat'] ?></td>                                              
-				<td><?= $d['jumlah_permintaan_obat'] ?></td>
-				<td><?= $d['tgl_permintaan_obat'] ?></td>
-				<td><?= $d['status_permintaan_obat'] ?></td>
+                <td align="center"><?= $no++ ?></td>
+                <td align="center"><?= $d['username'] ?></td>
+                <td align="center"><?= $d['nama_obat'] ?></td>                                              
+                <td align="center"><?= $d['jumlah_permintaan_obat'] ?></td>
+                <td align="center"><?= $d['tgl_permintaan_obat'] ?></td>
+                <td align="center"><?= $d['keterangan_apotek'] ?></td>
+                <td align="center"><?= $d['keterangan_farmasi'] ?></td>
+                <td align="center"><?= $d['status_permintaan_obat'] ?></td>
 			</tr>
 			<?php 
 			}
 			?>
     	</tbody>
 	</table>
+	<script>
+		window.print();
+	</script>
 </body>

@@ -10,7 +10,7 @@
             <div class="modal-body">
                 <table class="table table-bordered table-hover">
                     <tr>
-                        <td>Nama Obat Permintaan</td>
+                        <td>Nama Obat Permintaan1</td>
                         <td>
                             <?= $d['nama_obat'] ?>
                         </td>
