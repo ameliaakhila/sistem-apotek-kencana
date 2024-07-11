@@ -1,7 +1,7 @@
 <?php 
     ob_start();
     session_start();
-    if ($_SESSION['status'] != "apotik") {
+    if ($_SESSION['status'] != "apotek") {
         header("location:index.php?pesan=belum_login");
     }
 ?>
@@ -79,7 +79,7 @@
                 <?php $username = $_SESSION['username']; ?>
 				<div class="brand-title">
 					<h2 class="">Sistem</h2>
-					<span class="brand-sub-title">Apotik Kencana</span>
+					<span class="brand-sub-title">Apotek Kencana</span>
 				</div>
             </a>
             <div class="nav-control">

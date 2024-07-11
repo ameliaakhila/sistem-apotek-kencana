@@ -6,7 +6,7 @@ if ($_SESSION['status'] != "admin") {
 }
 
 header("Content-type: application/vnd-ms-excel");
-header("Content-Disposition: attachment; filename=Laporan lengkap.xls");
+header("Content-Disposition: attachment; filename=Laporan obat masuk lengkap.xls");
 ?>
 
 <!DOCTYPE html>
@@ -43,43 +43,36 @@ header("Content-Disposition: attachment; filename=Laporan lengkap.xls");
     </style>
 </head>
 <body>
-    <!-- <a class="back" href="clear_tamper.php">KEMBALI</a>
-
-    <center>
-        <h1>Export Data Ke Excel</h1>
-    </center>
-
-    <center>
-        <a class="export" href="">EXPORT SETING</a>
-        <a class="export" href="clear_tamper_export.php">EXPORT KE EXCEL</a>
-    </center> -->
-
     <table id="tabel_js" class="table table-primary">
         <thead>
             <tr>
-				<th>No</th>
+                <th>No</th>
                 <th>Kode Transaksi</th>
                 <th>Tanggal</th>
                 <th>Nama Obat</th>
                 <th>Jumlah Obat</th>
+                <th>Tanggal Kadaluarsa</th>
+                <th>Keterangan</th>
             </tr>
         </thead>
         <tbody>
         <?php 
         // koneksi database
-        include('../koneksi.php');
+        include('../../koneksi.php');
 
         // menampilkan data pegawai
-        $data = mysqli_query($koneksi,"SELECT * FROM tb_obat_masuk");
+        $data = mysqli_query($koneksi,"SELECT * FROM tb_obat_masuk,tb_obat WHERE tb_obat_masuk.id_obat=tb_obat.id_obat");
         $no = 1;
         while($d = mysqli_fetch_array($data)){
         ?>
         <tr>
-            <td><?php echo $no++; ?></td>
-            <td><?php echo $d['kode_transaksi'] ?></td>
-            <td><?php echo date('d m Y', strtotime($d['tgl_obat_masuk'])); ?></td>         
-            <td><?php echo $d['id_obat'] ?></td>          
-            <td><?php echo $d['jumlah_obat'] ?></td>
+            <td align="center"><?php echo $no++; ?></td>
+            <td align="center"><?php echo $d['kode_transaksi'] ?></td>
+            <td align="center"><?php echo date('d-m-Y', strtotime($d['tgl_obat_masuk'])); ?></td>         
+            <td align="center"><?php echo $d['nama_obat'] ?></td>          
+            <td align="center"><?php echo $d['jumlah_obat'] ?></td>
+            <td align="center"><?php echo date('d-m-Y', strtotime($d['tgl_kadaluarsa'])) ?></td>
+            <td align="center"><?php echo $d['keterangan'] ?></td>
         </tr>
         <?php 
         }

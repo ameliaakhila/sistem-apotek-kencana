@@ -1,5 +1,5 @@
-<?php include('../template/header-apotik.php') ?>
-<?php include('../template/header-apotik-menu.php') ?>
+<?php include('../template/header-apotek.php') ?>
+<?php include('../template/header-apotek-menu.php') ?>
 
 		<!--**********************************
             Content body start
@@ -15,7 +15,7 @@
 							<div class="card-header border-0">
 								<div>
 									<h4 class="fs-30 font-w700">Apotek Kencana💊</h4>
-                                    <p style="font-size: 14px;">Selamat datang di Aplikasi Gudang Apotik! Silakan login untuk mengakses sistem manajemen gudang kami yang efisien dan aman. Dengan login, Anda dapat melakukan pemantauan stok obat, 
+                                    <p style="font-size: 14px;">Selamat datang di Aplikasi Gudang Apotek! Silakan login untuk mengakses sistem manajemen gudang kami yang efisien dan aman. Dengan login, Anda dapat melakukan pemantauan stok obat, 
                                         pengelolaan pesanan, dan pelacakan distribusi secara real-time.</p>
 								</div>
 							</div>	

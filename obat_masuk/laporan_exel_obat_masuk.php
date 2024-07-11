@@ -17,9 +17,9 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <?php include('../alert.php') ?>
-                                    <a href="laporan_obat_masuk_cetak_full.php" class="btn btn-primary btn-sm"><i data-feather="plus"></i> Download Full Rekap</a><br><br>
+                                    <a href="cetak/laporan_exel_full.php" class="btn btn-primary btn-sm"><i data-feather="plus"></i> Download Full Rekap</a><br><br>
                                     <tr>
-                                        <form action="laporan_obat_masuk_cetak_bulanan.php" method="post">
+                                        <form action="cetak/laporan_exel_bulanan.php" method="post">
                                         <td>
                                             Bulan
                                             <select name="bulan" id="">
@@ -41,7 +41,7 @@
                                         </td>
                                     </tr> 
                                     <tr>
-                                        <form action="laporan_obat_masuk_cetak_tahunan.php" method="post">
+                                        <form action="cetak/laporan_exel_tahunan.php" method="post">
                                         <td>
                                             Tahun
                                             <select name="tahun" id="">
@@ -64,8 +64,9 @@
                                                 <th>Kode Transaksi</th>
                                                 <th>Tanggal</th>
                                                 <th>Nama Obat</th>
-                                                <th class="text-center">Jumlah Obat</th>
-                                                <th class="text-center">Opsi</th>
+                                                <th>Jumlah Obat</th>
+                                                <th>Tanggal Kadaluarsa</th>
+                                                <th>Keterangan</th>
                                             </tr>
                                         </thead>
                                       
@@ -78,22 +79,16 @@
                                             while ($d = mysqli_fetch_array($data)) {
                                             ?>
                                             <tr>
-                                                <td><?= $no++ ?></td>
-                                                <td><?= $d['kode_transaksi'] ?></td>
-                                                <td><?= date('d M Y', strtotime($d['tgl_obat_masuk'])); ?></td>                                              
-                                                <td><?= $d['nama_obat'] ?></td>                                              
-                                                <td class="text-center"><?= $d['jumlah_obat'] ?></td>
-                                                <td class="text-center">
-													<a href="obat_masuk_hapus.php?id_obat_masuk=<?= $d['id_obat_masuk']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
-                                                    <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_obat_masuk']; ?>" id=".$d['id_obat_masuk']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
-                                                    <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_obat_masuk']; ?>" id=".$d['id_obat_masuk']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>
-                                                    <?php include('laporan_obat_masuk_modal.php') ?>
-                                                </td>
-
+                                                <td><?php echo $no++; ?></td>
+                                                <td><?php echo $d['kode_transaksi'] ?></td>
+                                                <td><?php echo date('d M Y', strtotime($d['tgl_obat_masuk'])); ?></td>         
+                                                <td><?php echo $d['nama_obat'] ?></td>          
+                                                <td align="center"><?php echo $d['jumlah_obat'] ?></td>
+                                                <td align="center"><?php echo date('d M Y', strtotime($d['tgl_kadaluarsa'])) ?></td>
+                                                <td><?php echo $d['keterangan'] ?></td>
                                             </tr>
                                              <?php } ?>
                                         </tbody>
-                                       
                                     </table>
                                 </div>
                             </div>
