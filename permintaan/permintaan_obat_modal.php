@@ -38,9 +38,9 @@
                                 <div class="bootstrap-badge">
                                     <span class="badge badge-sm badge-info">Dikirim</span>
                                 </div>
-                            <?php }elseif($d['status_permintaan_obat'] == "selesai"){ ?>
+                            <?php }elseif($d['status_permintaan_obat'] == "diterima apotek"){ ?>
                                 <div class="bootstrap-badge">
-                                    <span class="badge badge-sm badge-success">Selesai</span>
+                                    <span class="badge badge-sm badge-success">Diterima Apotek</span>
                                 </div>
                                 <?php }elseif($d['status_permintaan_obat'] == "ditolak"){ ?>
                                 <div class="bootstrap-badge">
@@ -121,11 +121,11 @@
                                 <div class="bootstrap-badge">
                                     <span class="badge badge-sm badge-info">Dikirim</span>
                                 </div>
-                            <?php }elseif($d['status_permintaan_obat'] == "selesai"){ ?>
+                            <?php }elseif($d['status_permintaan_obat'] == "diterima apotek"){ ?>
                                 <div class="bootstrap-badge">
-                                    <span class="badge badge-sm badge-success">Selesai</span>
+                                    <span class="badge badge-sm badge-success">Diterima Apotek</span>
                                 </div>
-                                <?php }elseif($d['status_permintaan_obat'] == "ditolak"){ ?>
+                            <?php }elseif($d['status_permintaan_obat'] == "ditolak"){ ?>
                                 <div class="bootstrap-badge">
                                     <span class="badge badge-sm badge-danger">Ditolak</span>
                                 </div>

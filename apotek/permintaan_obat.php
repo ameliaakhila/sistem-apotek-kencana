@@ -55,9 +55,9 @@
                                                         <div class="bootstrap-badge">
                                                             <span class="badge badge-sm badge-info">Dikirim</span>
                                                         </div>
-                                                    <?php }elseif($d['status_permintaan_obat'] == "selesai"){ ?>
+                                                    <?php }elseif($d['status_permintaan_obat'] == "diterima apotek"){ ?>
                                                         <div class="bootstrap-badge">
-                                                            <span class="badge badge-sm badge-success">Selesai</span>
+                                                            <span class="badge badge-sm badge-success">Diterima Apotek</span>
                                                         </div>
                                                      <?php }elseif($d['status_permintaan_obat'] == "ditolak"){ ?>
                                                         <div class="bootstrap-badge">
@@ -72,6 +72,7 @@
                                                 <td>
 													<!-- <a href="permintaan_obat.php?id_obat=<?= $d['id_obat']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a> -->
                                                     <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button>
+                                                    <button data-bs-toggle="modal" data-bs-target="#konfirmasi<?= $d['id_permintaan_obat']; ?>" id=".$d['id_permintaan_obat']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-location-arrow"></i></button>
                                                     <?php include('permintaan_obat_modal.php') ?>
                                                 </td>
 

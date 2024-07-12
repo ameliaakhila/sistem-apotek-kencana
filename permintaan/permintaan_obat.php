@@ -22,7 +22,8 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama Obat</th>                                                                                              
+                                                <th>Nama Obat</th>  
+                                                <th style="text-align: center;">Stok</th>                                              
                                                 <th style="text-align: center;">Jumlah Permintaan</th>                                              
                                                 <th style="text-align: center;">Tanggal Permintaan</th>
                                                 <th>Status</th>
@@ -40,6 +41,7 @@
                                             <tr>
                                                 <td><?= $no++ ?></td>
                                                 <td><?= $d['nama_obat'] ?></td>                                              
+                                                <td style="text-align: center;"><?= $d['stok_obat'] ?></td>
                                                 <td style="text-align: center;"><?= $d['jumlah_permintaan_obat'] ?></td>
                                                 <td style="text-align: center;"><?= date('d M Y', strtotime($d['tgl_permintaan_obat'])); ?></td>
                                                 <td>
@@ -51,9 +53,9 @@
                                                         <div class="bootstrap-badge">
                                                             <span class="badge badge-sm badge-info">Dikirim</span>
                                                         </div>
-                                                    <?php }elseif($d['status_permintaan_obat'] == "selesai"){ ?>
+                                                    <?php }elseif($d['status_permintaan_obat'] == "diterima apotek"){ ?>
                                                         <div class="bootstrap-badge">
-                                                            <span class="badge badge-sm badge-success">Selesai</span>
+                                                            <span class="badge badge-sm badge-success">Diterima Apotek</span>
                                                         </div>
                                                      <?php }elseif($d['status_permintaan_obat'] == "ditolak"){ ?>
                                                         <div class="bootstrap-badge">

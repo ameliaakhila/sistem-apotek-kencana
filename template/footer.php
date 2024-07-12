@@ -76,6 +76,18 @@
 
 	<!-- akhir datepicker -->
 
+
+	<!-- select js awal -->
+
+	<script>
+		$(document).ready(function () {
+		//change selectboxes to selectize mode to be searchable
+		$("select").select2();
+		});
+	</script>
+		
+	<!-- select js akhir -->
+
 	<script>
 		function cardsCenter()
 		{
@@ -120,7 +132,7 @@
 			}, 1000); 
 		});
 		
-	</script>
+	</>
 
 </body>
 </html>
