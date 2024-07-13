@@ -15,7 +15,7 @@
 	<meta name="format-detection" content="telephone=no">
 	
 	<!-- PAGE TITLE HERE -->
-	<title>Workload Project Management</title>
+	<title>Sistem Apotek Kencana</title>
 	
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png" />
@@ -35,7 +35,7 @@
 									<div class="text-center mb-3">
 										<a href="index.html"><img src="../assets/images/logo-apotek.png" style="max-width: 100px"></a>
 									</div>
-                                    <h4 class="text-center mb-4">Sign in your account</h4>
+                                    <h4 class="text-center mb-4">Sistem Apotek Kencana</h4>
                                     <form method="post" action="cek_login.php">
                                         <div class="mb-3">
                                             <label class="mb-1"><strong>Username</strong></label>
