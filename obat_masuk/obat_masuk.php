@@ -28,6 +28,7 @@
                                                 <th>Tanggal</th>
                                                 <th>Nama Obat</th>
                                                 <th style="text-align:center;">Jumlah Obat</th>
+                                                <th style="text-align:center;">Tanggal Kadaluarsa</th>
                                                 <th style="text-align:center;">Opsi</th>
                                             </tr>
                                         </thead>
@@ -46,6 +47,7 @@
                                                 <td><?= date('d M Y', strtotime($d['tgl_obat_masuk'])); ?></td>                                              
                                                 <td><?= $d['nama_obat'] ?></td>                                              
                                                 <td style="text-align:center;"><?= $d['jumlah_obat'] ?></td>
+                                                <td style="text-align:center;"><?= date('d M Y', strtotime($d['tgl_kadaluarsa'])) ?></td>
                                                 <td>
                                                     <center>
 													<a href="obat_masuk_hapus.php?id_obat_masuk=<?= $d['id_obat_masuk']; ?>" onclick="return confirm('Anda yakin Hapus data jenis obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
