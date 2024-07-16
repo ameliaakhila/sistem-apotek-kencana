@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tb_jenis_obat` (
   `id_jenis_obat` int(11) NOT NULL,
   `nama_jenis_obat` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data untuk tabel `tb_jenis_obat`

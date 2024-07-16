@@ -29,8 +29,8 @@
 	<link href="../assets/vendor/owl-carousel/owl.carousel.css" rel="stylesheet">
     <link href="../assets/css/style.css" rel="stylesheet">
 
-     <!-- Datatable -->
-     <link href="../assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <!-- Datatable -->
+    <link href="../assets/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
 	
 	<!-- Style css -->
     <link href="../assets/css/style.css" rel="stylesheet">

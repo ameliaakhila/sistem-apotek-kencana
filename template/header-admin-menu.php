@@ -43,7 +43,7 @@
 					<li>
 						<a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-solid fa-file-medical"></i>
-							<span class="nav-text">Laporan Obat</span>
+							<span class="nav-text">Laporan Obat Masuk</span>
 						</a>
 						<ul>
 							<li><a href="../obat_masuk/laporan_exel_obat_masuk.php">Laporan Exel</a></li>
