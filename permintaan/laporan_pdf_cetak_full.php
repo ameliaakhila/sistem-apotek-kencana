@@ -19,7 +19,7 @@ if ($_SESSION['status'] != "admin") {
             border-collapse: collapse;
         }
         table th, table td{
-            border: 1px solid #3c3c3c;
+            /* border: 1px solid #3c3c3c; */
             padding: 3px 8px;
         }
         .back {
@@ -41,7 +41,7 @@ if ($_SESSION['status'] != "admin") {
 </head>
 <body>
     <h1 style="text-align: center;">Laporan Permintaan Obat</h1>
-    <table id="tabel_js" class="table table-primary">
+    <table id="tabel_js" border="1" class="table table-primary">
     <thead>
         <tr>
             <th>No</th>
