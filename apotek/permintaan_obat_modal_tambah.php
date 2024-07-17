@@ -19,7 +19,7 @@
                                         $data_obat = mysqli_query($koneksi, "SELECT * FROM tb_obat ORDER BY nama_obat ASC");
                                         while ($d_obat = mysqli_fetch_array($data_obat)) {
                                     ?>
-                                    <option value="<?= $d_obat['id_obat'] ?>"><?= $d_obat['nama_obat'] ?></option>
+                                    <option value="<?= $d_obat['id_obat'] ?>"><?= $d_obat['nama_obat'] ?> [ <?= $d_obat['stok_obat'] ?> ]</option>
                                     <?php } ?>
                                 </select>
                             </td>

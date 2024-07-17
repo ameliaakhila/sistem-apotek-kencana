@@ -56,6 +56,13 @@
                 <button class='btn-close' type='button' data-bs-dismiss='alert' aria-label='Close'></button>
             </div>
             ";
+        } elseif ($_GET['pesan'] == "stok_tidak_cukup") {
+            echo "
+            <div class='alert alert-danger alert-dismissible fade show' role='alert'>
+                Permintaan Obat Tidak Cukup
+                <button class='btn-close' type='button' data-bs-dismiss='alert' aria-label='Close'></button>
+            </div>
+            ";
         }
         
     }

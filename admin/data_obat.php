@@ -19,6 +19,8 @@
                                     <?php include('../alert.php') ?>
 
                                     <button data-bs-toggle="modal" data-bs-target="#tambah" class="btn btn-primary btn-xs mb-2">Tambah Obat</button>
+                                    <a href="../permintaan/laporan_pdf_stok.php" class="btn btn-danger btn-xs mb-2">Laporan Stok Obat PDF</a>
+
                                     <?php include('data_obat_modal_tambah.php') ?>
                                     <table id="example3" class="table table-borderd" >
                                         <thead>

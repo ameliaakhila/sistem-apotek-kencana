@@ -116,6 +116,22 @@
                                         </tbody>
                                        
                                     </table>
+
+                                    <table style="border-collapse: collapse;  float: right;">
+                                        <tr>
+                                            <td>Serang, <?php
+                                                setlocale(LC_TIME, 'id_ID.UTF-8'); // Mengatur lokal ke bahasa Indonesia
+                                                echo strftime("%A, %d %B %Y"); // Menampilkan hari, tanggal, bulan, dan tahun dalam bahasa Indonesia
+                                                ?>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Kepala Gudang IFRS Kencana</td>
+                                        </tr>
+                                        <tr>
+                                            <td height="150px">Edy Sulaeman, Amd.Farm</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>

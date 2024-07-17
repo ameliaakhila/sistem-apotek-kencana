@@ -62,7 +62,7 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Nama</th>                                                                                              
+                                                <!-- <th>Nama</th>                                                                                               -->
                                                 <th style="text-align:center;">Nama Obat</th>                                            
                                                 <th style="text-align:center;">Jumlah Permintaan</th>
                                                 <th style="text-align:center;">Tanggal Permintaan</th>                                             
@@ -80,7 +80,7 @@
                                             ?>
                                             <tr>
                                                 <td><?= $no++ ?></td>
-                                                <td><?= $d['username'] ?></td>
+                                                <!-- <td><?= $d['username'] ?></td> -->
                                                 <td><?= $d['nama_obat'] ?></td>                                              
                                                 <td style="text-align:center;"><?= $d['jumlah_permintaan_obat'] ?></td>
                                                 <td style="text-align:center;"><?= date('d M Y', strtotime($d['tgl_permintaan_obat'])) ?></td>                                                

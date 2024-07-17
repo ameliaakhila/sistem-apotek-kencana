@@ -37,7 +37,7 @@ if ($_SESSION['status'] != "admin") {
 	}
 	table th,
 	table td{
-		border: 1px solid #3c3c3c;
+		/* border: 1px solid #3c3c3c; */
 		padding: 3px 8px;
 	}
 	.back {
@@ -56,8 +56,8 @@ if ($_SESSION['status'] != "admin") {
 		padding: 8px 10px;
 	}
 	</style>
-	    <h1 style="text-align: center;">Laporan Permintaan Obat</h1>
-	<table id="tabel_js" class="table table-primary">
+	    <h2 style="text-align: center;">Laporan Permintaan Obat</h2>
+		<table id="tabel_js" border="1" class="table table-primary" >
 		<thead>
 			<tr>
 				<th>No</th>
@@ -96,6 +96,23 @@ if ($_SESSION['status'] != "admin") {
 			?>
     	</tbody>
 	</table>
+
+	<table style="border-collapse: collapse;  float: right;">
+		<tr>
+			<td>Serang, <?php
+				setlocale(LC_TIME, 'id_ID.UTF-8'); // Mengatur lokal ke bahasa Indonesia
+				echo strftime("%A, %d %B %Y"); // Menampilkan hari, tanggal, bulan, dan tahun dalam bahasa Indonesia
+				?>
+			</td>
+		</tr>
+		<tr>
+			<td>Kepala Gudang IFRS Kencana</td>
+		</tr>
+		<tr>
+        	<td height="150px">Edy Sulaeman, Amd.Farm</td>
+		</tr>
+	</table>
+	
 	<script>
 		window.print();
 	</script>
