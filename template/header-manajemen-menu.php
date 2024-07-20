@@ -3,7 +3,7 @@
 				<ul class="metismenu" id="menu">
 
                     <li>
-						<a href="widget-basic.html" class="" aria-expanded="false">
+						<a href="index.php" class="" aria-expanded="false">
 							<i class="fas fa-home"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
