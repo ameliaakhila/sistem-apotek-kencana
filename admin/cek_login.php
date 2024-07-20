@@ -31,6 +31,9 @@ if ($cek > 0) {
     } elseif ($login['status'] == "gudang") {
         $_SESSION['status'] = "gudang";
         header("location:../gudang/index.php");
+    } elseif ($login['status'] == "manajemen") {
+        $_SESSION['status'] = "manajemen";
+        header("location:../manajemen/index.php");
     } else {
         header("location:index.php?pesan=gagal1");
     }

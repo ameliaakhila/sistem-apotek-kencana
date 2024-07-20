@@ -29,6 +29,7 @@
                                 <option value="admin">Admin</option>
                                 <option value="apotek">apotek</option>
                                 <option value="gudang">gudang</option>
+                                <option value="manajemen">manajemen</option>
                             </select>
                         </td>
                     </tr>
