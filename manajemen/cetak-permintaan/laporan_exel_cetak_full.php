@@ -59,7 +59,7 @@ header("Content-Disposition: attachment; filename=Laporan permintaan lengkap.xls
 
         <tbody>
             <?php 
-            include '../koneksi.php';
+            include '../../koneksi.php';
             $no = 1;
             $data = mysqli_query($koneksi, "SELECT * from tb_obat,tb_jenis_obat,tb_permintaan_obat,tb_user where tb_user.id_user=tb_permintaan_obat.id_user AND tb_permintaan_obat.id_obat=tb_obat.id_obat AND tb_obat.id_jenis_obat=tb_jenis_obat.id_jenis_obat");
             while ($d = mysqli_fetch_array($data)) {

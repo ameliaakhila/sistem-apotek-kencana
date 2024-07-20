@@ -5,7 +5,7 @@ if ($_SESSION['status'] != "manajemen") {
 }
 
 		// koneksi database
-        include('../koneksi.php');
+        include('../../koneksi.php');
 		$bulan = htmlspecialchars($_POST['bulan']);
 
 		if (empty($bulan) || !is_numeric($bulan)) {
@@ -28,34 +28,33 @@ if ($_SESSION['status'] != "manajemen") {
 	<title>Export Data Ke Excel</title>
 <body>
 	<style type="text/css">
-	body{
-		font-family: sans-serif;
-	}
-	table{
-		margin: 20px auto;
-		border-collapse: collapse;
-	}
-	table th,
-	table td{
-		border: 1px solid #3c3c3c;
-		padding: 3px 8px;
-	}
-	.back {
-		text-decoration: none;
-		color: white;
-		background: red;
-		border-radius: 10px;
-		padding: 8px 10px;
-		margin: 10px;
-	}
-	.export {
-		text-decoration: none;
-		color: white;
-		background: blue;
-		border-radius: 10px;
-		padding: 8px 10px;
-	}
-	</style>
+        body{
+            font-family: sans-serif;
+        }
+        table{
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        table th, table td{
+            border: 1px solid #3c3c3c;
+            padding: 3px 8px;
+        }
+        .back {
+            text-decoration: none;
+            color: white;
+            background: red;
+            border-radius: 10px;
+            padding: 8px 10px;
+            margin: 10px;
+        }
+        .export {
+            text-decoration: none;
+            color: white;
+            background: blue;
+            border-radius: 10px;
+            padding: 8px 10px;
+        }
+    </style>
 <?php 
     // Activate these headers to enable Excel export
     header("Content-type: application/vnd-ms-excel");
@@ -78,7 +77,7 @@ if ($_SESSION['status'] != "manajemen") {
     
 		<tbody>
 			<?php 
-			include '../koneksi.php';
+			include '../../koneksi.php';
 			$no = 1;
 			$data = mysqli_query($koneksi, "SELECT * FROM `tb_permintaan_obat`
 											JOIN tb_obat ON tb_permintaan_obat.id_obat = tb_obat.id_obat

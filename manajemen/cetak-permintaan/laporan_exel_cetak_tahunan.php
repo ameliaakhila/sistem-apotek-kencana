@@ -5,7 +5,7 @@ if ($_SESSION['status'] != "manajemen") {
 }
 
 		// koneksi database
-        include('../koneksi.php');
+        include('../../koneksi.php');
 		// $bulan = htmlspecialchars($_POST['bulan']);
 		$tahun = htmlspecialchars($_POST['tahun']);
 
@@ -79,7 +79,7 @@ if ($_SESSION['status'] != "manajemen") {
     
 		<tbody>
 			<?php 
-			include '../koneksi.php';
+			include '../../koneksi.php';
 			$no = 1;
 			$data = mysqli_query($koneksi, "SELECT * FROM `tb_permintaan_obat`
 											JOIN tb_obat ON tb_permintaan_obat.id_obat = tb_obat.id_obat
