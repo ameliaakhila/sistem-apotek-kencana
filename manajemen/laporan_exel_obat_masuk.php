@@ -17,9 +17,9 @@
                             <div class="card-body">
                                 <div class="table-responsive">
                                     <?php include('../alert.php') ?>
-                                    <a href="laporan_exel_full.php" class="btn btn-primary btn-sm"><i data-feather="plus"></i> Download Full Rekap</a><br><br>
+                                    <a href="cetak-obat-masuk/laporan_exel_full.php" class="btn btn-primary btn-sm"><i data-feather="plus"></i> Download Full Rekap</a><br><br>
                                     <tr>
-                                        <form action="laporan_exel_bulanan.php" method="post">
+                                        <form action="cetak-obat-masuk/laporan_exel_bulanan.php" method="post">
                                         <td>
                                             Bulan
                                             <select name="bulan" id="">
@@ -41,7 +41,7 @@
                                         </td>
                                     </tr> 
                                     <tr>
-                                        <form action="laporan_exel_tahunan.php" method="post">
+                                        <form action="cetak-obat-masuk/laporan_exel_tahunan.php" method="post">
                                         <td>
                                             Tahun
                                             <select name="tahun" id="">
