@@ -151,7 +151,7 @@
                                 <option value="<?= $d['status_permintaan_obat'] ?>">Pilihan Awal ( <?= $d['status_permintaan_obat'] ?> )</option>
                                 <option value="proses">Proses</option>
                                 <option value="dikirim">Dikirim</option>
-                                <option value="selesai">Selesai</option>
+                                <!-- <option value="selesai">Selesai</option> -->
                                 <option value="ditolak">Ditolak</option>
                             </select>
                         </td>

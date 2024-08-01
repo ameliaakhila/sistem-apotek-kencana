@@ -1,6 +1,6 @@
 <?php 
 session_start();
-if ($_SESSION['status'] != "admin") {
+if (($_SESSION['status'] != "admin") && ($_SESSION['status'] != "admin"))  {
     header("location:login.php?pesan=belum_login");
     exit;
 }
