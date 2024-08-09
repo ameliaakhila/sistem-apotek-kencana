@@ -65,7 +65,7 @@
                                                             <span class="badge badge-sm badge-secondary">Error</span>
                                                         </div>
                                                     <?php } ?>
-                                            </td>
+                                                </td>
                                                 <td>
                                                     <center>
                                                     <a href="permintaan_obat_hapus.php?id_permintaan_obat=<?= $d['id_permintaan_obat']; ?>" onclick="return confirm('Anda yakin Hapus data permintaan obat <?php echo $d['nama_obat']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>

@@ -14,6 +14,12 @@
 						</a>
 					</li>
 					<li>
+						<a href="../gudang/obat_kadaluarsa.php">
+							<i class="fa fa-exclamation-circle"></i>
+							<span class="nav-text">Obat Kadaluarsa</span>
+						</a>
+					</li>
+					<li>
 						<a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-solid fa-file-medical"></i>
 							<span class="nav-text">Laporan</span>

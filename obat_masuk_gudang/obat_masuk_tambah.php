@@ -32,15 +32,15 @@ $kode_transaksi = 'BM-'. $tanggal_hari_ini . '-' . $nomor_urut_format;
 
 // akhir pembuatan kode transaksi
 
-$tgl_obat_masuk = date('y-m-d', strtotime($_POST['tgl_obat_masuk']));
+$tgl_obat_masuk = date('d-m-Y', strtotime($_POST['tgl_obat_masuk']));
 $id_obat = $_POST['id_obat'];
 $jumlah_obat = $_POST['jumlah_obat'];
-$tgl_kadaluarsa = date('y-m-d', strtotime($_POST['tgl_kadaluarsa']));
+$tgl_kadaluarsa = date('d-m-Y', strtotime($_POST['tgl_kadaluarsa']));
 $keterangan = $_POST['keterangan'];
+$status_terjual = 'Belum Terjual';
 
-
-$query = "INSERT INTO tb_obat_masuk (kode_transaksi, tgl_obat_masuk, id_obat, jumlah_obat, tgl_kadaluarsa, keterangan) 
-          VALUES ('$kode_transaksi', '$tgl_obat_masuk','$id_obat', '$jumlah_obat', '$tgl_kadaluarsa', '$keterangan')";
+$query = "INSERT INTO tb_obat_masuk (kode_transaksi, tgl_obat_masuk, id_obat, jumlah_obat, tgl_kadaluarsa, keterangan, status_terjual) 
+          VALUES ('$kode_transaksi', '$tgl_obat_masuk','$id_obat', '$jumlah_obat', '$tgl_kadaluarsa', '$keterangan', '$status_terjual')";
 $cek_tambah = mysqli_query($koneksi, $query);
 
 

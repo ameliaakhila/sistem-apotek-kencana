@@ -4,57 +4,57 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Obat Masuk Edit</h5>
+                <h5 class="modal-title">Obat Status Terjual</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <table class="table">
-                    <form action="obat_masuk_edit.php" method="post" enctype="multipart/form-data">
+                <form action="obat_kadaluarsa_edit.php" method="post" enctype="multipart/form-data">
+                <table class="table table-bordered table-striped">
                     <tr>
                         <td>Kode Transaksi</td>
                         <td>
-                            <input class="form-control" type="text" name="kode_transaksi" value="<?= $d['kode_transaksi'] ?>" require readonly>
-                            <input type="hidden" name="id_obat_masuk" value="<?= $d['id_obat_masuk'] ?>">
+                            <?= $d['kode_transaksi'] ?>
                         </td>
                     </tr>
                     <tr>
                         <td>Tanggal Obat Masuk</td>
                         <td>
-                            <input type="date" name="tgl_obat_masuk"  value="<?= $d['tgl_obat_masuk'] ?>" class="form-control" require>
+                            <?= $d['tgl_obat_masuk'] ?>
                         </td>
                     </tr>
                     <tr>
                         <td>Nama Obat</td>
                         <td>
-                            <select class="default-select wide form-control" name="id_obat" id="" require>
-                                <option value="<?= $d['id_obat'] ?>">Pilihan Awal ( <?= $d['nama_obat'] ?> )</option>
-                                <?php 
-                                    include('../koneksi.php');
-                                    $data_jenis = mysqli_query($koneksi, "SELECT * from tb_obat");
-                                    while ($d1 = mysqli_fetch_array($data_jenis)) {
-                                ?>
-                                <option value="<?= $d1['id_obat'] ?>"><?= $d1['nama_obat'] ?></option>
-                                <?php } ?>
-                            </select>                            
+                             <?= $d['nama_obat'] ?>                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Nama Jenis Obat</td>
+                        <td>
+                             <?= $d['nama_jenis_obat'] ?>                           
                         </td>
                     </tr>
                     <tr>
                         <td>Jumlah Obat Masuk</td>
                         <td>
-                            <input class="form-control" type="number" name="jumlah_obat" value="<?= $d['jumlah_obat'] ?>" require>
+                            <?= $d['jumlah_obat'] ?>
                         </td>
                     </tr>
                     <tr>
                         <td>Tanggal Kadaluarsa</td>
                         <td>
-                            <!-- <input type="text" class="form-control" name="tgl_kadaluarsa" id="mdate"> -->
-                            <input type="date" name="tgl_kadaluarsa"  value="<?= $d['tgl_kadaluarsa'] ?>" class="form-control" id="" require>
+                            <?= $d['tgl_kadaluarsa'] ?>
                         </td>
                     </tr>
                     <tr>
-                        <td>Keterangan</td>
+                        <td>Status Terjual</td>
                         <td>
-                            <input class="form-control" type="text" name="keterangan" value="<?= $d['keterangan'] ?>" require>
+                            <input type="hidden" name="id_obat_masuk" value="<?= $d['id_obat_masuk'] ?>">
+                            <select class="default-select wide form-control" name="status_terjual" id="" require>
+                                <option value="<?= $d['status_terjual'] ?>">Pilihan Awal ( <?= $d['status_terjual'] ?> )</option>
+                                <option value="Terjual">Terjual</option>
+                                <option value="Belum Terjual">Belum Terjual</option>
+                            </select>  
                         </td>
                     </tr>
                 </table>
