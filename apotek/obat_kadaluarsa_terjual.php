@@ -28,7 +28,7 @@
                                                 <th style="text-align:center;">Kadaluarsa</th>
                                                 <th style="text-align:center;">Status</th>
                                                 <th style="text-align:center;">Kondisi</th>
-                                                <th style="text-align:center;">Opsi</th>
+                                                <!-- <th style="text-align:center;">Opsi</th> -->
                                             </tr>
                                         </thead>
                                       
@@ -65,14 +65,7 @@
                                                         </div>
                                                     <?php } ?>
                                                 </td>
-                                                <td>
-                                                    <center>
-                                                    <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_obat_masuk']; ?>" id=".$d['id_obat_masuk']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
-                                                    <!-- <button data-bs-toggle="modal" data-bs-target="#detail<?= $d['id_obat_masuk']; ?>" id=".$d['id_obat_masuk']." class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></button> -->
-                                                    <?php include('obat_kadaluarsa_modal.php') ?>
-                                                    </center>
-                                                </td>
-
+                                                
                                             </tr>
                                              <?php } ?>
                                         </tbody>
