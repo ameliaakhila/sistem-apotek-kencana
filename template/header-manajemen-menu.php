@@ -9,6 +9,13 @@
 						</a>
 					</li>
 
+					 <li>
+						<a href="laporan_pdf_stok.php" class="" aria-expanded="false">
+							<i class="fas fa-solid fa-file-medical"></i>
+							<span class="nav-text">Stok Obat</span>
+						</a>
+					</li>
+
 					<li>
 						<a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-solid fa-file-medical"></i>
