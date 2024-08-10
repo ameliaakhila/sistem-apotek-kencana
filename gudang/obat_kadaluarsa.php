@@ -47,50 +47,7 @@
                                                 <td style="text-align:center;"><?= $d['jumlah_obat'] ?></td>
                                                 <td style="text-align:center;"><?= date('d M Y', strtotime($d['tgl_kadaluarsa'])) ?></td>
                                                 <td style="text-align:center;">
-                                                    <?php 
-                                                    
-                                                    // Ambil tanggal hari ini dalam format d-m-Y
-                                                    $tanggal_hari_ini = date('d-m-Y');
-
-                                                    // Ambil tanggal kadaluarsa dari input dan ubah ke format d-m-Y
-                                                    $tanggal_kadaluarsa = date('d-m-Y', strtotime($d['tgl_kadaluarsa']));
-
-                                                    // Mengubah format tanggal menjadi objek DateTime untuk perbandingan
-                                                    $today = DateTime::createFromFormat('d-m-Y', $tanggal_hari_ini);
-                                                    $expiry_date = DateTime::createFromFormat('d-m-Y', $tanggal_kadaluarsa);
-
-                                                    // Hitung selisih bulan antara hari ini dan tanggal kadaluarsa
-                                                    $diff = $today->diff($expiry_date);
-                                                    $months_diff = ($diff->y * 12) + $diff->m;
-
-                                                    if ($expiry_date < $today) {
-                                                        echo "
-                                                         <div class='bootstrap-badge'>
-                                                            <span class='badge badge-sm badge-danger'>Obat Kadaluarsa</span>
-                                                        </div>
-                                                        
-                                                        ";
-                                                    } elseif ($months_diff == 0) {
-                                                        echo "
-                                                        <div class='bootstrap-badge'>
-                                                            <span class='badge badge-sm badge-warning'>Kadaluarsa Bulan ini</span>
-                                                        </div>                                                        
-                                                        ";
-                                                    } elseif ($months_diff == 1 && $expiry_date > $today) {
-                                                        echo "
-                                                        <div class='bootstrap-badge'>
-                                                            <span class='badge badge-sm badge-info'>Obat Menuju Kadaluarsa</span>
-                                                        </div>                                                        
-                                                        ";
-                                                    } else {
-                                                       echo "
-                                                        <div class='bootstrap-badge'>
-                                                            <span class='badge badge-sm badge-success'>Obat Belum Kadaluarsa</span>
-                                                        </div>                                                        
-                                                        ";
-                                                    }
-                                                    
-                                                    ?>
+                                                    <?php include('obat_kadaluarsa_status.php'); ?>
                                                 </td>
                                                 <td style="text-align:center;">
                                                     <?php if($d['status_terjual'] == "Belum Terjual"){ ?>

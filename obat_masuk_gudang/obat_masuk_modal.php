@@ -9,24 +9,24 @@
             </div>
             <div class="modal-body">
                 <table class="table">
-                    <form action="obat_masuk_edit.php" method="post" enctype="multipart/form-data">
+                    <form action="obat_masuk_edit.php" method="post">
                     <tr>
                         <td>Kode Transaksi</td>
                         <td>
-                            <input class="form-control" type="text" name="kode_transaksi" value="<?= $d['kode_transaksi'] ?>" require readonly>
+                            <input class="form-control" type="text" name="kode_transaksi" value="<?= $d['kode_transaksi'] ?>" required readonly>
                             <input type="hidden" name="id_obat_masuk" value="<?= $d['id_obat_masuk'] ?>">
                         </td>
                     </tr>
                     <tr>
                         <td>Tanggal Obat Masuk</td>
                         <td>
-                            <input type="date" name="tgl_obat_masuk"  value="<?= $d['tgl_obat_masuk'] ?>" class="form-control" require>
+                            <input type="date" name="tgl_obat_masuk"  class="form-control" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Nama Obat</td>
                         <td>
-                            <select class="default-select wide form-control" name="id_obat" id="" require>
+                            <select class="default-select wide form-control" name="id_obat" id="" required>
                                 <option value="<?= $d['id_obat'] ?>">Pilihan Awal ( <?= $d['nama_obat'] ?> )</option>
                                 <?php 
                                     include('../koneksi.php');
@@ -41,20 +41,20 @@
                     <tr>
                         <td>Jumlah Obat Masuk</td>
                         <td>
-                            <input class="form-control" type="number" name="jumlah_obat" value="<?= $d['jumlah_obat'] ?>" require>
+                            <input class="form-control" type="number" name="jumlah_obat" value="<?= $d['jumlah_obat'] ?>" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Tanggal Kadaluarsa</td>
                         <td>
                             <!-- <input type="text" class="form-control" name="tgl_kadaluarsa" id="mdate"> -->
-                            <input type="date" name="tgl_kadaluarsa"  value="<?= $d['tgl_kadaluarsa'] ?>" class="form-control" id="" require>
+                            <input type="date" name="tgl_kadaluarsa"   class="form-control" id="" required>
                         </td>
                     </tr>
                     <tr>
                         <td>Keterangan</td>
                         <td>
-                            <input class="form-control" type="text" name="keterangan" value="<?= $d['keterangan'] ?>" require>
+                            <input class="form-control" type="text" name="keterangan" value="<?= $d['keterangan'] ?>" required>
                         </td>
                     </tr>
                 </table>
