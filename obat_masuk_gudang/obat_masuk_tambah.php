@@ -37,10 +37,11 @@ $id_obat = $_POST['id_obat'];
 $jumlah_obat = $_POST['jumlah_obat'];
 $tgl_kadaluarsa = date('d-m-Y', strtotime($_POST['tgl_kadaluarsa']));
 $keterangan = $_POST['keterangan'];
+$nama_rak = $_POST['nama_rak'];
 $status_terjual = 'Belum Terjual';
 
-$query = "INSERT INTO tb_obat_masuk (kode_transaksi, tgl_obat_masuk, id_obat, jumlah_obat, tgl_kadaluarsa, keterangan, status_terjual) 
-          VALUES ('$kode_transaksi', '$tgl_obat_masuk','$id_obat', '$jumlah_obat', '$tgl_kadaluarsa', '$keterangan', '$status_terjual')";
+$query = "INSERT INTO tb_obat_masuk (kode_transaksi, tgl_obat_masuk, id_obat, jumlah_obat, tgl_kadaluarsa, keterangan, status_terjual, nama_rak) 
+          VALUES ('$kode_transaksi', '$tgl_obat_masuk','$id_obat', '$jumlah_obat', '$tgl_kadaluarsa', '$keterangan', '$status_terjual','$nama_rak')";
 $cek_tambah = mysqli_query($koneksi, $query);
 
 

@@ -45,6 +45,19 @@
                         </td>
                     </tr>
                     <tr>
+                        <td>Nama Rak</td>
+                        <td>
+                            <select name="nama_rak" id="" class="form-control">
+                                <option value="">Pilihan</option>
+                                <option value="Rak 1">Rak 1</option>
+                                <option value="Rak 2">Rak 2</option>
+                                <option value="Rak 3">Rak 3</option>
+                                <option value="Rak 4">Rak 4</option>
+                                <option value="Rak 5">Rak 5</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
                         <td>Keterangan</td>
                         <td>
                             <input class="form-control" type="text" name="keterangan" value="" placeholder="Inputkan Keterangan Obat" require>

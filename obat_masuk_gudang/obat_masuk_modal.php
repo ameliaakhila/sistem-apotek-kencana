@@ -47,8 +47,22 @@
                     <tr>
                         <td>Tanggal Kadaluarsa</td>
                         <td>
-                            <!-- <input type="text" class="form-control" name="tgl_kadaluarsa" id="mdate"> -->
                             <input type="date" name="tgl_kadaluarsa"   class="form-control" id="" required>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>Nama Rak</td>
+                        <td>
+                            <select class="form-control" name="nama_rak" id="" required>
+                                <option value="<?= $d['nama_rak'] ?>">Pilihan Awal ( <?= $d['nama_rak'] ?> )</option>
+                                <?php 
+                                    include('../koneksi.php');
+                                    $data_jenis = mysqli_query($koneksi, "SELECT * from tb_obat");
+                                    while ($d1 = mysqli_fetch_array($data_jenis)) {
+                                ?>
+                                <option value="<?= $d1['id_obat'] ?>"><?= $d1['nama_obat'] ?></option>
+                                <?php } ?>
+                            </select>                            
                         </td>
                     </tr>
                     <tr>
@@ -116,6 +130,12 @@
                         <td>Tanggal Kadaluarsa</td>
                         <td>
                             <?= $d['tgl_kadaluarsa'] ?>
+                        </td>
+                    </tr>
+                      <tr>
+                        <td>Nama Rak</td>
+                        <td>
+                            <?= $d['nama_rak'] ?>
                         </td>
                     </tr>
                     <tr>

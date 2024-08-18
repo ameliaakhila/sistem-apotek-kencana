@@ -46,6 +46,13 @@
 							<span class="nav-text">Data Obat Masuk</span>
 						</a>
 					</li>
+
+					<li>
+						<a href="../rak/index.php">
+							<i class="fas fa-solid fa-cubes"></i>
+							<span class="nav-text">Data Rak</span>
+						</a>
+					</li>
 					<li>
 						<a class="has-arrow " href="javascript:void()" aria-expanded="false">
 							<i class="fas fa-solid fa-file-medical"></i>
