@@ -43,6 +43,7 @@
                                                     <center>
                                                     <a href="rak_hapus.php?id_rak=<?= $d['id_rak']; ?>" onclick="return confirm('Anda yakin Hapus data jenis rak <?php echo $d['nama_rak']; ?> ?')" class="btn btn-danger shadow btn-xs sharp me-1"><i class="fas fa-trash-alt"></i></a>
                                                     <button data-bs-toggle="modal" data-bs-target="#edit<?= $d['id_rak']; ?>" id=".$d['id_rak']." class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></button>
+                                                    <a href="rak_detail.php?id_rak=<?= $d['id_rak']; ?>" class="btn btn-info shadow btn-xs sharp me-1"><i class="fas fa-eye"></i></a>
                                                     <?php include('rak_modal.php') ?>
                                                     </center>
                                                 </td>

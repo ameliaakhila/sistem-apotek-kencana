@@ -47,14 +47,16 @@
                     <tr>
                         <td>Nama Rak</td>
                         <td>
-                            <select name="nama_rak" id="" class="form-control">
+                            <select class="default-select wide form-control" name="id_rak" require>
                                 <option value="">Pilihan</option>
-                                <option value="Rak 1">Rak 1</option>
-                                <option value="Rak 2">Rak 2</option>
-                                <option value="Rak 3">Rak 3</option>
-                                <option value="Rak 4">Rak 4</option>
-                                <option value="Rak 5">Rak 5</option>
-                            </select>
+                                <?php 
+                                    include('../koneksi.php');
+                                    $data_jenis = mysqli_query($koneksi, "SELECT * from tb_rak");
+                                    while ($d1 = mysqli_fetch_array($data_jenis)) {
+                                ?>
+                                <option value="<?= $d1['id_rak'] ?>"><?= $d1['nama_rak'] ?></option>
+                                <?php } ?>
+                            </select>    
                         </td>
                     </tr>
                     <tr>

@@ -37,8 +37,9 @@
                                             <?php 
                                             include '../koneksi.php';
                                             $no = 1;
-                                            $data = mysqli_query($koneksi, "SELECT * from tb_obat_masuk, tb_obat, tb_jenis_obat 
-                                            where tb_obat_masuk.id_obat=tb_obat.id_obat AND tb_obat.id_jenis_obat=tb_jenis_obat.id_jenis_obat");
+                                            $data = mysqli_query($koneksi, "SELECT * from tb_obat_masuk, tb_obat, tb_jenis_obat, tb_rak 
+                                            where tb_obat_masuk.id_obat=tb_obat.id_obat AND tb_obat.id_jenis_obat=tb_jenis_obat.id_jenis_obat AND 
+                                            tb_rak.id_rak=tb_obat_masuk.id_rak");
                                             while ($d = mysqli_fetch_array($data)) {
                                             ?>
                                             <tr>
