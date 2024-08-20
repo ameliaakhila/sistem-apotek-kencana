@@ -47,7 +47,8 @@
                                                 <th>Tgl Obat Masuk</th> 
                                                 <th>Nama Rak</th> 
                                                 <th>Nama Obat</th>  
-                                                <th style="text-align:center;">Jumlah Obat</th>                                               
+                                                <th style="text-align:center;">Jumlah Obat</th>
+                                                <th style="text-align:center;">Kadaluarsa</th>                                                                                              
                                                 <!-- <th style="text-align:center;">Opsi</th> -->
                                             </tr>
                                         </thead>
@@ -69,7 +70,7 @@
                                                 <td><?= $d['nama_rak'] ?></td>
                                                 <td><?= $d['nama_obat'] ?></td>
                                                 <td style="text-align:center;"><?= $d['jumlah_obat'] ?></td>
-                                                
+                                                <td style="text-align:center;"><?= $d['tgl_kadaluarsa'] ?></td>
                                             </tr>
                                         </tbody>
                                         <?php } ?>
